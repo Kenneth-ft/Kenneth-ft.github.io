@@ -15,18 +15,18 @@ html {
 }
 
 :root {
-    --bg-primary: #0e1117;
-    --bg-surface: #161b22;
-    --bg-surface-hover: #1f242c;
-    --bg-header: rgba(14, 17, 23, 0.88);
-    --border-color: #30363d;
+    --bg-primary: #120c0e;
+    --bg-surface: #1a1114;
+    --bg-surface-hover: #24171c;
+    --bg-header: rgba(18, 12, 14, 0.88);
+    --border-color: #38242a;
     --border-hover: #e82f2f;
-    --text-primary: #f0f6fc;
-    --text-secondary: #8b949e;
-    --text-muted: #6e7681;
+    --text-primary: #fdf2f4;
+    --text-secondary: #ad979c;
+    --text-muted: #7d6b70;
     --accent: #e82f2f;
     --accent-hover: #ff4747;
-    --accent-glow: rgba(232, 47, 47, 0.18);
+    --accent-glow: rgba(232, 47, 47, 0.20);
     
     /* Category Colors */
     --cat-mech: #fb923c;
@@ -1148,7 +1148,7 @@ footer {
    ========================================================================== */
 
 .git-terminal-header {
-    background-color: #0b0e14;
+    background-color: #0e090b;
     border: 1px solid var(--border-color);
     border-radius: 8px 8px 0 0;
     padding: 0.85rem 1.25rem;
@@ -1179,7 +1179,7 @@ footer {
     flex-wrap: wrap;
     gap: 1.75rem;
     padding: 0.85rem 1.25rem;
-    background-color: #0d1117;
+    background-color: #140d10;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -1200,7 +1200,7 @@ footer {
     display: inline-block;
 }
 
-.legend-swatch.main-swatch { background-color: var(--accent); }
+.legend-swatch.main-swatch { background-color: #58a6ff; }
 .legend-swatch.coop-swatch { background-color: #34d399; }
 .legend-swatch.team-swatch { background-color: #fb923c; }
 
@@ -1294,16 +1294,16 @@ footer {
     height: 100%;
 }
 
-.track-line-main { stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
+.track-line-main { stroke: #58a6ff; stroke-width: 2.5; stroke-linecap: round; }
 .track-line-coop { stroke: #34d399; stroke-width: 2.5; stroke-linecap: round; }
 .track-line-team { stroke: #fb923c; stroke-width: 2.5; stroke-linecap: round; }
 .track-line-merge { stroke: #facc15; stroke-width: 2.5; stroke-linecap: round; }
 
-.node-main { fill: #0e1117; stroke: var(--accent); stroke-width: 3; }
-.node-coop { fill: #0e1117; stroke: #34d399; stroke-width: 3; }
-.node-team { fill: #0e1117; stroke: #fb923c; stroke-width: 3; }
-.node-merge { fill: #0e1117; stroke: #facc15; stroke-width: 3.5; }
-.node-root { fill: var(--accent); stroke: #ff6b6b; stroke-width: 3; }
+.node-main { fill: var(--bg-primary); stroke: #58a6ff; stroke-width: 3; }
+.node-coop { fill: var(--bg-primary); stroke: #34d399; stroke-width: 3; }
+.node-team { fill: var(--bg-primary); stroke: #fb923c; stroke-width: 3; }
+.node-merge { fill: var(--bg-primary); stroke: #facc15; stroke-width: 3.5; }
+.node-root { fill: #58a6ff; stroke: #79c0ff; stroke-width: 3; }
 
 /* Backward compatibility classes */
 .git-node {
@@ -1334,11 +1334,11 @@ footer {
 .git-hash {
     font-family: var(--font-mono);
     font-size: 0.78rem;
-    color: #ff6b6b;
-    background-color: rgba(232, 47, 47, 0.1);
+    color: #79c0ff;
+    background-color: rgba(88, 166, 255, 0.1);
     padding: 0.15rem 0.5rem;
     border-radius: 4px;
-    border: 1px solid rgba(232, 47, 47, 0.25);
+    border: 1px solid rgba(88, 166, 255, 0.25);
 }
 
 .git-branch-pill {
@@ -1349,7 +1349,7 @@ footer {
     font-weight: 600;
 }
 
-.branch-main { background-color: rgba(232, 47, 47, 0.15); color: #ff6b6b; border: 1px solid rgba(232, 47, 47, 0.35); }
+.branch-main { background-color: rgba(88, 166, 255, 0.15); color: #79c0ff; border: 1px solid rgba(88, 166, 255, 0.3); }
 .branch-bionics { background-color: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
 .branch-firmware { background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
 .branch-mechanics { background-color: rgba(251, 146, 60, 0.15); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.3); }

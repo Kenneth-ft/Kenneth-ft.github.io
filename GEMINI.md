@@ -22,3 +22,7 @@ This repository (`Kenneth-ft.github.io`) is a **purely static website** hosted o
    - Dark theme (`#0e1117`) with crimson red accents (`#e82f2f`), glassmorphism headers, and high-contrast typography.
    - Center Kenneth's identity: BASc Mechatronic Systems Engineering at SFU, bare-metal C/C++ firmware, PCB design, and hands-on mechanical diagnostics.
 
+Primary Hex Code: #e82f2f (rgb(232, 47, 47))
+Hover Accent: #ff4747 (rgb(255, 71, 71))
+Light Accent / Mono Hashes: #ff6b6b (rgb(255, 107, 107))
+Subtle Glow & Translucent Badges: rgba(232, 47, 47, 0.12) to 0.18
