@@ -19,6 +19,6 @@ This repository (`Kenneth-ft.github.io`) is a **purely static website** hosted o
    - Contact forms must operate either through client-side feedback, `mailto:`, or serverless static form endpoints (e.g. Formspree) without exposing credentials.
 
 4. **Design Aesthetic & Branding**:
-   - Dark theme (`#0e1117`) with cyan/blue accents (`#58a6ff`), glassmorphism headers, and high-contrast typography.
+   - Dark theme (`#0e1117`) with crimson red accents (`#e82f2f`), glassmorphism headers, and high-contrast typography.
    - Center Kenneth's identity: BASc Mechatronic Systems Engineering at SFU, bare-metal C/C++ firmware, PCB design, and hands-on mechanical diagnostics.
 
