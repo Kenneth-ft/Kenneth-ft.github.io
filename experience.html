@@ -82,77 +82,146 @@
                     <div style="color: var(--accent);">&#x25C9; branch: main</div>
                 </div>
 
+                <!-- Track Legend -->
+                <div class="git-track-legend">
+                    <div class="git-legend-item">
+                        <span class="legend-swatch main-swatch"></span>
+                        <span class="legend-branch">Track 0: main</span>
+                        <span class="legend-desc">(MEC &rarr; Capilano &rarr; SFU BASc)</span>
+                    </div>
+                    <div class="git-legend-item">
+                        <span class="legend-swatch coop-swatch"></span>
+                        <span class="legend-branch">Track 1: coop/*</span>
+                        <span class="legend-desc">(Promag &amp; Takachar Industry Co-ops)</span>
+                    </div>
+                    <div class="git-legend-item">
+                        <span class="legend-swatch team-swatch"></span>
+                        <span class="legend-branch">Track 2: team/bionics</span>
+                        <span class="legend-desc">(EWB SFU Bionics &amp; MakerLabs)</span>
+                    </div>
+                </div>
+
                 <!-- Branch Filter Bar -->
                 <div class="git-filter-bar">
-                    <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Filter Branch:</span>
-                    <button class="git-filter-pill active" data-branch="all">All Commits</button>
-                    <button class="git-filter-pill" data-branch="main">main (Core &amp; SFU)</button>
-                    <button class="git-filter-pill" data-branch="bionics">feature/bionics-leadership</button>
-                    <button class="git-filter-pill" data-branch="firmware">feature/embedded-firmware</button>
-                    <button class="git-filter-pill" data-branch="mechanics">feature/mechanics (MEC)</button>
+                    <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Filter Tracks:</span>
+                    <button class="git-filter-pill active" data-branch="all">All Tracks &amp; Commits</button>
+                    <button class="git-filter-pill" data-branch="main">main (Foundations &amp; SFU)</button>
+                    <button class="git-filter-pill" data-branch="coop">coop/* (Industry Co-ops)</button>
+                    <button class="git-filter-pill" data-branch="team-bionics">team/bionics (Flagship Leadership)</button>
                 </div>
 
                 <!-- Git Graph Log Container -->
                 <div class="git-graph-container">
 
-                    <!-- Commit 1: EWB SFU Bionics -->
-                    <div class="git-commit" data-branch="bionics">
+                    <!-- Commit 1: EWB SFU Bionics (Track 2: team/bionics) -->
+                    <div class="git-commit" data-branch="team-bionics">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node bionics"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team/bionics track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- commit node on Track 2 -->
+                                <circle cx="72" cy="28" r="7" class="node-team" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">c8f94d2</span>
-                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
-                                <span class="git-branch-pill branch-main">HEAD -> main</span>
-                                <span class="badge-featured">&#x2605; Latest</span>
+                                <span class="git-branch-pill branch-bionics">origin/team/bionics-lead</span>
+                                <span class="badge-featured">&#x2605; Latest (Flagship Pseudo-Capstone)</span>
                             </div>
                             <h3 class="git-commit-title">Lead Systems Integrator &bull; EWB SFU Bionics Team</h3>
                             <div class="git-commit-meta">
                                 Author: Kenneth Tubungbanua &bull; Date: Jan 2026 &ndash; Present &bull; Surrey, BC
                             </div>
                             <ul class="git-commit-diff">
-                                <li>Drafted the system concept and architecture for an underactuated, tendon-driven, EMG-controlled 7DOF prosthetic hand for transradial amputees.</li>
-                                <li>Coordinating multi-disciplinary efforts across 3 mechanical subteams, 1 electrical team, 1 biomedical team, and 1 software team.</li>
-                                <li>Designing and routing custom multi-board PCBs in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards.</li>
-                                <li>Created a modular C/C++ Hardware Abstraction Layer (HAL) for interfacing with servos, load cells, and magnetic joint encoders.</li>
+                                <li>Conceptualized and architected the electro-mechanical systems for an underactuated, tendon-driven, EMG-controlled 7DOF prosthetic hand for transradial amputees.</li>
+                                <li>Coordinating multi-disciplinary milestones across 5 teams (3 mechanical subteams, 1 electrical team, 1 biomedical team, and 1 firmware/UI team).</li>
+                                <li>Designed and routed custom multi-board PCBs in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards.</li>
+                                <li>Created a modular C/C++ Hardware Abstraction Layer (HAL) for deterministic communication with servos, load cells, and magnetic joint encoders.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Commit 2: MakerLabs -->
-                    <div class="git-commit" data-branch="bionics">
+                    <!-- Commit 2: MakerLabs (Track 2: team/bionics) -->
+                    <div class="git-commit" data-branch="team-bionics">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node bionics"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- commit node on Track 2 -->
+                                <circle cx="72" cy="28" r="6" class="node-team" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">b4a10e7</span>
-                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
+                                <span class="git-branch-pill branch-bionics">team/bionics &amp; community</span>
                             </div>
                             <h3 class="git-commit-title">Electronics &amp; Soldering Instructor &bull; MakerLabs</h3>
                             <div class="git-commit-meta">
                                 Author: Kenneth Tubungbanua &bull; Date: Feb 2026 &ndash; Present &bull; Vancouver, BC
                             </div>
                             <ul class="git-commit-diff">
-                                <li>Teach practical circuit analysis, Ohm's Law, breadboard prototyping, and electronic test instrumentation (DMM, power supply) to adult makers and youth.</li>
+                                <li>Teach practical circuit analysis, Ohm's Law, breadboard prototyping, and electronic test instrumentation (DMM, power supply, oscilloscope) to adult makers and youth.</li>
                                 <li>Lead hands-on soldering workshops covering wire splicing, through-hole (THT) assembly, and perfboard circuit construction.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Commit 3: Takachar -->
-                    <div class="git-commit" data-branch="firmware">
+                    <!-- Commit 3: Merge Takachar into Main (Track 0: merge) -->
+                    <div class="git-commit" data-branch="coop main">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node firmware"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- coop track merges from below (44, 100%) into node (16, 28) -->
+                                <line x1="44" y1="56" x2="44" y2="100%" class="track-line-coop" />
+                                <path d="M 44,56 C 44,42 16,42 16,28" class="track-line-coop" fill="none" />
+                                <!-- merge node on Track 0 -->
+                                <circle cx="16" cy="28" r="7" class="node-merge" />
+                            </svg>
+                        </div>
+                        <div class="git-commit-card" style="border-left: 3px solid #facc15;">
+                            <div class="git-commit-header">
+                                <span class="git-hash">8d41e2a</span>
+                                <span class="git-branch-pill branch-merge">merge: coop/takachar &rarr; main</span>
+                            </div>
+                            <h3 class="git-commit-title">Merge Commit: Industrial documentation infrastructure into main</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Dec 2025 &bull; Salmon Arm, BC
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                                Successfully merged the centralized MediaWiki engineering documentation repository and standardized operating procedures for biomass pyrolysis reactors back into core career trunk.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Commit 4: Takachar Co-op (Track 1: coop) -->
+                    <div class="git-commit" data-branch="coop">
+                        <div class="git-track">
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- coop track connects to merge above -->
+                                <line x1="44" y1="0" x2="44" y2="28" class="track-line-coop" />
+                                <!-- coop branches off from main below -->
+                                <path d="M 16,56 C 16,42 44,42 44,28" class="track-line-coop" fill="none" />
+                                <!-- commit node on Track 1 -->
+                                <circle cx="44" cy="28" r="6" class="node-coop" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">7f39d2c</span>
-                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
+                                <span class="git-branch-pill" style="background-color: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">origin/coop/takachar</span>
                             </div>
                             <h3 class="git-commit-title">Project Engineer (Technical Documentation) &bull; Takachar</h3>
                             <div class="git-commit-meta">
@@ -166,84 +235,116 @@
                         </div>
                     </div>
 
-                    <!-- Commit 4: Promag Enviro Systems -->
-                    <div class="git-commit" data-branch="firmware">
+                    <!-- Commit 5: Merge Promag into Main (Track 0: merge) -->
+                    <div class="git-commit" data-branch="coop main">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node firmware"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- coop track merges from below (44, 100%) into node (16, 28) -->
+                                <line x1="44" y1="56" x2="44" y2="100%" class="track-line-coop" />
+                                <path d="M 44,56 C 44,42 16,42 16,28" class="track-line-coop" fill="none" />
+                                <!-- merge node on Track 0 -->
+                                <circle cx="16" cy="28" r="7" class="node-merge" />
+                            </svg>
+                        </div>
+                        <div class="git-commit-card" style="border-left: 3px solid #facc15;">
+                            <div class="git-commit-header">
+                                <span class="git-hash">5b93d18</span>
+                                <span class="git-branch-pill branch-merge">merge: coop/promag-enviro &rarr; main</span>
+                            </div>
+                            <h3 class="git-commit-title">Merge Commit: Telemetry enclosure &amp; Linux drivers into main</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Dec 2022 &bull; Langley, BC
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                                Successfully merged waterproof IP-rated industrial enclosure tooling, custom i.MX8MM processor breakout PCB, and Linux kernel device tree overlays into main repository.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Commit 6: Promag Enviro Systems (Track 1: coop) -->
+                    <div class="git-commit" data-branch="coop">
+                        <div class="git-track">
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- coop track connects to merge above -->
+                                <line x1="44" y1="0" x2="44" y2="28" class="track-line-coop" />
+                                <!-- coop branches off from main below -->
+                                <path d="M 16,56 C 16,42 44,42 44,28" class="track-line-coop" fill="none" />
+                                <!-- commit node on Track 1 -->
+                                <circle cx="44" cy="28" r="6" class="node-coop" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">4e819fa</span>
-                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
+                                <span class="git-branch-pill" style="background-color: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">origin/coop/promag-enviro</span>
                             </div>
                             <h3 class="git-commit-title">Product Development Team (Hardware &amp; Firmware) &bull; Promag Enviro Systems</h3>
                             <div class="git-commit-meta">
                                 Author: Kenneth Tubungbanua &bull; Date: May 2022 &ndash; Dec 2022 &bull; Langley, BC
                             </div>
                             <ul class="git-commit-diff">
-                                <li>Designed a waterproof, rugged industrial enclosure for an environmental telemetry controller in Fusion 360; coordinated with parts manufacturers.</li>
-                                <li>Designed and specified components for a custom PCB in KiCAD to interface with SPI and UART buses of an NXP i.MX8MM processor.</li>
+                                <li>Designed a waterproof, rugged industrial enclosure for an environmental telemetry controller in Fusion 360; coordinated directly with injection molding and CNC vendors.</li>
+                                <li>Designed and specified components for a custom PCB in KiCAD to interface high-speed SPI and UART buses of an NXP i.MX8MM processor.</li>
                                 <li>Authored device tree nodes in the Linux kernel to bind custom PCB peripherals and set up secure SSH continuous development servers.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Commit 5: Merge Commit (Mechanics -> Main) -->
-                    <div class="git-commit" data-branch="merge">
-                        <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node merge"></div>
-                        </div>
-                        <div class="git-commit-card" style="border-left: 3px solid #facc15;">
-                            <div class="git-commit-header">
-                                <span class="git-hash">a2c85e3</span>
-                                <span class="git-branch-pill branch-merge">merge: feature/mechanics &rarr; main</span>
-                            </div>
-                            <h3 class="git-commit-title">Merge Commit: Integrate mechanical diagnostic discipline into mechatronics</h3>
-                            <div class="git-commit-meta">
-                                Author: Kenneth Tubungbanua &bull; Date: Sep 2021 &bull; Transition Milestone
-                            </div>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                                Merged four years of hands-on mechanical troubleshooting, bearing overhaul, and hydraulic diagnostic techniques into the academic and embedded firmware development path at Simon Fraser University.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Commit 6: SFU Mechatronics -->
+                    <!-- Commit 7: SFU Mechatronics Core Trunk (Track 0: main) -->
                     <div class="git-commit" data-branch="main">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node main"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team/bionics branches out from main here -->
+                                <path d="M 16,28 C 16,14 72,14 72,0" class="track-line-team" fill="none" />
+                                <!-- commit node on Track 0 -->
+                                <circle cx="16" cy="28" r="7" class="node-main" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">d6189bc</span>
                                 <span class="git-branch-pill branch-main">main</span>
+                                <span class="nav-badge" style="background-color: rgba(88, 166, 255, 0.1); border-color: rgba(88, 166, 255, 0.3); font-size: 0.72rem;">Academic Trunk</span>
                             </div>
                             <h3 class="git-commit-title">BASc. Mechatronic Systems Engineering &bull; Simon Fraser University</h3>
                             <div class="git-commit-meta">
-                                Author: Kenneth Tubungbanua &bull; Date: 2021 &ndash; 2026 &bull; Surrey, BC
+                                Author: Kenneth Tubungbanua &bull; Date: Sep 2021 &ndash; 2026 &bull; Surrey, BC
                             </div>
                             <ul class="git-commit-diff">
-                                <li>Specialized in <strong>Modern Control Systems</strong> (observer-based state-feedback controller for omnidirectional spherical robot in MATLAB/Simulink).</li>
+                                <li>Specialized in <strong>Modern Control Systems</strong>: designed observer-based state-feedback controller for omnidirectional spherical robot in MATLAB/Simulink.</li>
                                 <li><strong>Industrial Control Systems:</strong> PLC state machines and discrete digital filtering in LogixPro.</li>
                                 <li><strong>Advanced Robotics Kinematics:</strong> DH parameter modeling, inverse kinematics solver, and workspace analysis in MATLAB.</li>
-                                <li><strong>Real-Time Embedded Systems:</strong> Register-level C firmware and real-time PID control on STM32 ARM Cortex.</li>
+                                <li><strong>Real-Time Embedded Systems:</strong> Register-level C firmware and real-time PID control on STM32 ARM Cortex-M.</li>
+                                <li><em>Branch point: Spawned design team track (<code>team/bionics-lead</code>) and industry co-ops (<code>coop/*</code>).</em></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Commit 7: Nelson Avenue Church -->
-                    <div class="git-commit" data-branch="firmware">
+                    <!-- Commit 8: Nelson Avenue Church -->
+                    <div class="git-commit" data-branch="main">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node firmware"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- commit node on Track 0 -->
+                                <circle cx="16" cy="28" r="6" class="node-main" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">91e45da</span>
-                                <span class="git-branch-pill branch-firmware">origin/feature/av-broadcast</span>
+                                <span class="git-branch-pill branch-main">main</span>
+                                <span class="nav-badge" style="background-color: rgba(88, 166, 255, 0.1); border-color: rgba(88, 166, 255, 0.3); font-size: 0.72rem;">Hardware Integration</span>
                             </div>
                             <h3 class="git-commit-title">Livestream &amp; Audio Systems Technician &bull; Nelson Avenue Church</h3>
                             <div class="git-commit-meta">
@@ -256,16 +357,21 @@
                         </div>
                     </div>
 
-                    <!-- Commit 8: Capilano University -->
+                    <!-- Commit 9: Capilano University -->
                     <div class="git-commit" data-branch="main">
                         <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node main"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- commit node on Track 0 -->
+                                <circle cx="16" cy="28" r="6" class="node-main" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">f39a18d</span>
                                 <span class="git-branch-pill branch-main">main</span>
+                                <span class="nav-badge" style="background-color: rgba(88, 166, 255, 0.1); border-color: rgba(88, 166, 255, 0.3); font-size: 0.72rem;">Engineering Foundations</span>
                             </div>
                             <h3 class="git-commit-title">Engineering Transition Diploma &bull; Capilano University</h3>
                             <div class="git-commit-meta">
@@ -277,16 +383,21 @@
                         </div>
                     </div>
 
-                    <!-- Commit 9: MEC Bike Mechanic (Root Commit) -->
-                    <div class="git-commit" data-branch="mechanics">
+                    <!-- Commit 10: MEC Bike Mechanic (Root Commit) -->
+                    <div class="git-commit" data-branch="main">
                         <div class="git-track">
-                            <div class="git-node mechanics"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track terminates at root node -->
+                                <line x1="16" y1="0" x2="16" y2="28" class="track-line-main" />
+                                <!-- root commit node on Track 0 -->
+                                <circle cx="16" cy="28" r="8" class="node-root" />
+                            </svg>
                         </div>
                         <div class="git-commit-card">
                             <div class="git-commit-header">
                                 <span class="git-hash">1a789c0</span>
-                                <span class="git-branch-pill branch-mechanics">origin/feature/mechanics</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">[root-commit]</span>
+                                <span class="git-branch-pill branch-main">main</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #58a6ff; font-weight: 600;">[root-commit]</span>
                             </div>
                             <h3 class="git-commit-title">Bicycle Mechanic &amp; Clinic Instructor &bull; Mountain Equipment Company (MEC)</h3>
                             <div class="git-commit-meta">

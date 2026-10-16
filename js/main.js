@@ -14,13 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const filterValue = button.getAttribute('data-filter');
 
-            // Update active state on buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+            // Update active state on buttons with matching filter
+            filterButtons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === filterValue) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
 
             // Filter project cards in Gallery View
             projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
+                const category = card.getAttribute('data-category') || '';
                 const isFeatured = card.getAttribute('data-featured') === 'true';
                 const tags = card.getAttribute('data-tags') || '';
 
@@ -32,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         card.classList.add('is-hidden');
                     }
-                } else if (category === filterValue || tags.includes(filterValue)) {
+                } else if (category.includes(filterValue) || tags.includes(filterValue)) {
                     card.classList.remove('is-hidden');
                 } else {
                     card.classList.add('is-hidden');
@@ -41,17 +46,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Filter table rows in List View
             tableRows.forEach(row => {
-                const category = row.getAttribute('data-category');
+                const category = row.getAttribute('data-category') || '';
                 const isFeatured = row.getAttribute('data-featured') === 'true';
 
                 if (filterValue === 'all') {
                     row.style.display = '';
                 } else if (filterValue === 'featured') {
                     row.style.display = isFeatured ? '' : 'none';
-                } else if (category === filterValue) {
+                } else if (category.includes(filterValue)) {
                     row.style.display = '';
                 } else {
                     row.style.display = 'none';
+                }
+            });
+
+            // Filter roadmap entries in Timeline View
+            const roadmapEntries = document.querySelectorAll('.roadmap-entry');
+            roadmapEntries.forEach(entry => {
+                const category = entry.getAttribute('data-category') || '';
+                if (filterValue === 'all') {
+                    entry.style.display = '';
+                } else if (category.includes(filterValue)) {
+                    entry.style.display = '';
+                } else {
+                    entry.style.display = 'none';
                 }
             });
         });
@@ -110,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pill.classList.add('active');
 
             gitCommits.forEach(commit => {
-                const commitBranch = commit.getAttribute('data-branch');
-                if (branch === 'all' || commitBranch === branch || commitBranch === 'merge') {
+                const commitBranch = commit.getAttribute('data-branch') || '';
+                if (branch === 'all' || commitBranch.includes(branch)) {
                     commit.style.display = 'grid';
                 } else {
                     commit.style.display = 'none';
@@ -153,12 +171,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const feedback = document.querySelector('.form-feedback');
-            if (feedback) {
-                feedback.classList.add('success');
-                feedback.textContent = 'Thank you for reaching out, Kenneth will receive your message and follow up shortly!';
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const formAction = contactForm.getAttribute('action') || '';
+
+            // Check if a real Formspree endpoint is active
+            if (formAction.includes('formspree.io') && !formAction.includes('placeholder')) {
+                if (submitBtn) submitBtn.disabled = true;
+                if (feedback) {
+                    feedback.className = 'form-feedback';
+                    feedback.style.display = 'block';
+                    feedback.style.color = 'var(--text-secondary)';
+                    feedback.textContent = 'Sending message...';
+                }
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch(formAction, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        if (feedback) {
+                            feedback.className = 'form-feedback success';
+                            feedback.textContent = 'Thank you! Your message has been sent directly to Kenneth’s inbox.';
+                        }
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Formspree response not OK');
+                    }
+                } catch (err) {
+                    if (feedback) {
+                        feedback.className = 'form-feedback error';
+                        feedback.textContent = 'Unable to send message via form endpoint. Please connect with Kenneth on LinkedIn.';
+                    }
+                } finally {
+                    if (submitBtn) submitBtn.disabled = false;
+                }
+            } else {
+                // Client-side demonstration feedback
+                if (feedback) {
+                    feedback.className = 'form-feedback success';
+                    feedback.textContent = 'Thank you for reaching out! To receive messages directly in your email inbox, replace the placeholder in contact.html with your free Formspree endpoint ID.';
+                }
                 contactForm.reset();
             }
         });

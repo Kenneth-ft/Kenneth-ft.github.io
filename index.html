@@ -80,50 +80,37 @@
                     </p>
                 </div>
 
+                <!-- Discipline Filter Bar -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+                    <button class="filter-btn" data-filter="electrical">Electrical</button>
+                    <button class="filter-btn" data-filter="software">Software / Firmware</button>
+                </div>
+
                 <!-- Featured Project Gallery Grid -->
                 <div class="project-grid">
 
-                    <!-- Project 1: 6DOF Robot Arm -->
-                    <article class="project-card" data-featured="true" data-category="mechanical" data-tags="robotics kinematics stepper solidworks">
+                    <!-- Project 1: EWB SFU 7DOF Bionic Hand (PCBs + HAL Consolidated) -->
+                    <article class="project-card" data-featured="true" data-category="electrical software" data-tags="kicad pcb hal emg cpp bionics embedded">
                         <div>
                             <div class="card-header">
-                                <span class="category-badge badge-mechanical">Mechanical Hardware</span>
-                                <span class="badge-featured">&#x2605; Featured</span>
+                                <div class="card-badges">
+                                    <span class="category-badge badge-electrical">Electrical</span>
+                                    <span class="category-badge badge-software">Software</span>
+                                </div>
+                                <span class="badge-featured">&#x2605; Flagship Pseudo-Capstone</span>
                             </div>
-                            <h3 class="card-title">6DOF Articulated Robot Arm</h3>
+                            <h3 class="card-title">7DOF Bionic Hand: Custom PCBs &amp; Embedded HAL</h3>
                             <p class="card-description">
-                                Multi-axis robotic manipulator engineered with custom joint linkages, stepper motor drives, and hall-effect encoders for closed-loop position feedback. Implemented forward and inverse kinematics algorithms in C++ for spatial trajectory planning.
+                                Multi-disciplinary electro-mechanical systems architecture for an underactuated 7DOF prosthetic hand under EWB SFU Bionics. Designed multi-board KiCAD schematics/layouts for high-current power distribution and sensor multiplexing, paired with a deterministic C/C++ Hardware Abstraction Layer (HAL) for tendon actuation and real-time EMG state machines.
                             </p>
                             <div class="card-tech">
-                                <span class="tag">SolidWorks</span>
-                                <span class="tag">Kinematics</span>
-                                <span class="tag">Stepper Motors</span>
-                                <span class="tag">Hall Encoders</span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="projects/6dof-robot-arm.html" class="project-link">
-                                View Case Study &rarr;
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: Bionic Hand Power & Sensor PCBs -->
-                    <article class="project-card" data-featured="true" data-category="electrical" data-tags="kicad pcb smd power-distribution">
-                        <div>
-                            <div class="card-header">
-                                <span class="category-badge badge-electrical">Electrical Hardware</span>
-                                <span class="badge-featured">&#x2605; Featured</span>
-                            </div>
-                            <h3 class="card-title">Bionic Hand Power &amp; Sensor PCBs</h3>
-                            <p class="card-description">
-                                Multi-board PCB architecture for a 7DOF prosthetic hand under EWB SFU Bionics. Designed schematics and layouts in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards. Performed SMD soldering and hardware-in-the-loop verification.
-                            </p>
-                            <div class="card-tech">
-                                <span class="tag">KiCAD</span>
-                                <span class="tag">PCB Layout</span>
+                                <span class="tag">KiCAD Multi-Board</span>
+                                <span class="tag">C/C++ HAL</span>
+                                <span class="tag">EMG Filtering</span>
                                 <span class="tag">SMD Soldering</span>
-                                <span class="tag">Power Regulators</span>
+                                <span class="tag">I2C / SPI Buses</span>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -133,22 +120,54 @@
                         </div>
                     </article>
 
-                    <!-- Project 3: STM32 Line Follower -->
-                    <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal stm32 pid adc">
+                    <!-- Project 2: Promag Industrial Telemetry Controller (Consolidated Commercial Co-op) -->
+                    <article class="project-card" data-featured="true" data-category="mechanical electrical software" data-tags="fusion360 dfm enclosure industrial kicad spi uart imx8mm linux device-tree">
                         <div>
                             <div class="card-header">
-                                <span class="category-badge badge-software">Software / Firmware</span>
-                                <span class="badge-featured">&#x2605; Featured</span>
+                                <div class="card-badges">
+                                    <span class="category-badge badge-mechanical">Mechanical</span>
+                                    <span class="category-badge badge-electrical">Electrical</span>
+                                    <span class="category-badge badge-software">Software</span>
+                                </div>
+                                <span class="badge-featured" style="background-color: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">&#x2605; Commercial Co-op</span>
                             </div>
-                            <h3 class="card-title">STM32 Line Follower Robot</h3>
+                            <h3 class="card-title">Industrial Telemetry Controller: Enclosure, PCB &amp; Linux Drivers</h3>
                             <p class="card-description">
-                                Real-time autonomous differential-drive robot built on an STM32 ARM Cortex microcontroller. Engineered bare-metal C register-level peripheral drivers, DMA multi-channel ADC optical array scanning, and real-time digital PID feedback steering control.
+                                Full-lifecycle product development for an environmental telemetry controller at Promag Enviro Systems. Engineered a waterproof IP-rated industrial enclosure in Fusion 360 with vendor DFM, designed an expansion PCB in KiCAD for NXP i.MX8MM high-speed SPI/UART buses, and authored Linux kernel device tree overlays for continuous deployment.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tag">Fusion 360 DFM</span>
+                                <span class="tag">KiCAD PCB</span>
+                                <span class="tag">NXP i.MX8MM</span>
+                                <span class="tag">Linux Device Tree</span>
+                                <span class="tag">IP Waterproofing</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projects/telemetry-enclosure.html" class="project-link">
+                                View Case Study &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: STM32 Line Follower -->
+                    <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal stm32 pid adc dma timers">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-badges">
+                                    <span class="category-badge badge-software">Firmware</span>
+                                </div>
+                            </div>
+                            <h3 class="card-title">STM32 Autonomous Line Follower Robot</h3>
+                            <p class="card-description">
+                                Real-time autonomous differential-drive robot built on an STM32 ARM Cortex microcontroller. Engineered bare-metal C register-level peripheral drivers, DMA multi-channel ADC optical array scanning, and tuned 1.0 ms real-time digital PID feedback steering control.
                             </p>
                             <div class="card-tech">
                                 <span class="tag">Bare-Metal C</span>
-                                <span class="tag">STM32</span>
-                                <span class="tag">PID Control</span>
-                                <span class="tag">ADC &amp; PWM</span>
+                                <span class="tag">STM32 ARM Cortex</span>
+                                <span class="tag">Real-Time PID</span>
+                                <span class="tag">DMA &amp; Multi-ADC</span>
+                                <span class="tag">PWM Timers</span>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -158,26 +177,28 @@
                         </div>
                     </article>
 
-                    <!-- Project 4: Bionic Hand HAL Architecture -->
-                    <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal hal emg cpp">
+                    <!-- Project 4: 6DOF Robot Arm -->
+                    <article class="project-card" data-featured="true" data-category="mechanical" data-tags="robotics kinematics stepper solidworks encoders">
                         <div>
                             <div class="card-header">
-                                <span class="category-badge badge-software">Software / Firmware</span>
-                                <span class="badge-featured">&#x2605; Featured</span>
+                                <div class="card-badges">
+                                    <span class="category-badge badge-mechanical">Mechanical</span>
+                                </div>
                             </div>
-                            <h3 class="card-title">Bionic Hand HAL Architecture</h3>
+                            <h3 class="card-title">6DOF Articulated Robot Arm</h3>
                             <p class="card-description">
-                                Designed a modular C/C++ Hardware Abstraction Layer (HAL) for an EMG-controlled prosthetic hand under EWB SFU Bionics. Abstracted low-level I2C/SPI sensor acquisition and PWM tendon actuation from high-level EMG envelope detection and grip state machines.
+                                Multi-axis robotic manipulator engineered with custom joint linkages, preloaded bearing housings, stepper motor drives, and magnetic hall encoders for closed-loop feedback. Implemented forward and inverse kinematics algorithms in C++ for spatial trajectory planning in SolidWorks.
                             </p>
                             <div class="card-tech">
-                                <span class="tag">C / C++</span>
-                                <span class="tag">HAL Architecture</span>
-                                <span class="tag">EMG Processing</span>
-                                <span class="tag">State Machines</span>
+                                <span class="tag">SolidWorks CAD</span>
+                                <span class="tag">Inverse Kinematics (DH)</span>
+                                <span class="tag">Stepper Actuation</span>
+                                <span class="tag">Hall Encoders</span>
+                                <span class="tag">Closed-Loop Control</span>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="projects/bionic-hand.html" class="project-link">
+                            <a href="projects/6dof-robot-arm.html" class="project-link">
                                 View Case Study &rarr;
                             </a>
                         </div>
@@ -185,13 +206,9 @@
 
                 </div>
 
-                <!-- Callout to Dedicated Projects Page -->
-                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background-color: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: 8px;">
-                    <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">Looking for all engineering projects?</h3>
-                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.25rem; font-size: 0.95rem;">
-                        Explore our complete archive of mechanical enclosures, fluid-power robotics, optoelectronic automation, and embedded Linux device tree drivers across gallery, list, and roadmap timeline views.
-                    </p>
-                    <a href="projects.html" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.7rem 1.5rem;">
+                <!-- View All Projects Button -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="projects.html" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.75rem 1.75rem;">
                         View All Projects (Gallery, List &amp; Timeline Views) &rarr;
                     </a>
                 </div>
@@ -200,10 +217,8 @@
             <!-- Experience Teaser Section (Linking to dedicated experience.html) -->
             <section class="experience" id="experience">
                 <div class="section-header">
-                    <h2 class="section-title">Career Experience &amp; Git Graph</h2>
-                    <p class="section-desc">
-                        My career trajectory is tracked as an interactive Git commit log bridging hands-on mechanical diagnostics, firmware development, and systems leadership.
-                    </p>
+                    <h2 class="section-title">Career Experience</h2>
+                    
                 </div>
 
                 <!-- Terminal Header Teaser -->
@@ -217,56 +232,108 @@
                     <div style="color: var(--accent);">&#x25C9; branch: main</div>
                 </div>
 
+                <!-- Track Legend Teaser -->
+                <div class="git-track-legend">
+                    <div class="git-legend-item">
+                        <span class="legend-swatch main-swatch"></span>
+                        <span class="legend-branch">Track 0: main</span>
+                        <span class="legend-desc">(MEC &rarr; Capilano &rarr; SFU)</span>
+                    </div>
+                    <div class="git-legend-item">
+                        <span class="legend-swatch coop-swatch"></span>
+                        <span class="legend-branch">Track 1: coop/*</span>
+                        <span class="legend-desc">(Industry Co-ops &bull; Merged)</span>
+                    </div>
+                    <div class="git-legend-item">
+                        <span class="legend-swatch team-swatch"></span>
+                        <span class="legend-branch">Track 2: team/bionics</span>
+                        <span class="legend-desc">(Leadership &amp; Capstone)</span>
+                    </div>
+                </div>
+
                 <!-- Terminal Teaser Body -->
-                <div class="git-graph-container" style="padding: 1.75rem; border-radius: 0 0 8px 8px; margin-bottom: 2rem;">
-                    <div class="git-commit" style="margin-bottom: 1rem;">
-                        <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node bionics"></div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <div>
-                                <span class="git-hash">c8f94d2</span>
-                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
-                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Lead Systems Integrator &bull; EWB SFU Bionics Team</strong>
-                            </div>
-                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Architected 7DOF bionic hand, power/sensor PCBs, and modular C/C++ HAL.</span>
-                        </div>
-                    </div>
-
-                    <div class="git-commit" style="margin-bottom: 1rem;">
-                        <div class="git-track">
-                            <div class="git-line"></div>
-                            <div class="git-node firmware"></div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <div>
-                                <span class="git-hash">4e819fa</span>
-                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
-                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Product Development Team &bull; Promag Enviro Systems</strong>
-                            </div>
-                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Fusion 360 waterproof enclosure, i.MX8MM expansion PCB &amp; Linux kernel device trees.</span>
-                        </div>
-                    </div>
-
+                <div class="git-graph-container" style="border-radius: 0 0 8px 8px; margin-bottom: 2rem;">
+                    <!-- Teaser Row 1: Team/Bionics -->
                     <div class="git-commit">
                         <div class="git-track">
-                            <div class="git-node merge"></div>
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <line x1="72" y1="28" x2="72" y2="100%" class="track-line-team" />
+                                <circle cx="72" cy="28" r="7" class="node-team" />
+                            </svg>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <div>
-                                <span class="git-hash">a2c85e3</span>
-                                <span class="git-branch-pill branch-merge">merge: feature/mechanics &rarr; main</span>
-                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Merge: 4 Years MEC Bike Mechanic into Mechatronics</strong>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">c8f94d2</span>
+                                <span class="git-branch-pill branch-mechanics">origin/team/bionics-lead</span>
+                                <span class="badge-featured" style="font-size: 0.72rem;">&#x2605; Latest</span>
                             </div>
-                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Fused mechanical problem-solving and bearing/fluid diagnostics into engineering.</span>
+                            <h3 class="git-commit-title" style="font-size: 1.15rem;">Lead Systems Integrator &bull; EWB SFU Bionics Team</h3>
+                            <div class="git-commit-meta">Jan 2026 &ndash; Present &bull; Surrey, BC</div>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.5rem; margin-bottom: 0;">
+                                Architected 7DOF underactuated prosthetic hand, sensor/power distribution PCBs in KiCAD, and deterministic C/C++ Hardware Abstraction Layer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Teaser Row 2: Coop/Promag (Merged into main) -->
+                    <div class="git-commit">
+                        <div class="git-track">
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <!-- main track passes through -->
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <!-- team track passes through -->
+                                <line x1="72" y1="0" x2="72" y2="100%" class="track-line-team" />
+                                <!-- coop track comes up from below to commit node -->
+                                <line x1="44" y1="28" x2="44" y2="100%" class="track-line-coop" />
+                                <!-- coop track curves and merges into main track at (16, 0) -->
+                                <path d="M 44,28 C 44,8 16,8 16,0" class="track-line-coop" fill="none" />
+                                <!-- commit node on coop track -->
+                                <circle cx="44" cy="28" r="6" class="node-coop" />
+                            </svg>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">4e819fa</span>
+                                <span class="git-branch-pill" style="background-color: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">coop/promag-enviro &rarr; merged</span>
+                                <span class="nav-badge" style="background-color: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.3); font-size: 0.72rem;">Industry Co-op</span>
+                            </div>
+                            <h3 class="git-commit-title" style="font-size: 1.15rem;">Product Development Team (Hardware &amp; Firmware) &bull; Promag Enviro Systems</h3>
+                            <div class="git-commit-meta">May 2022 &ndash; Dec 2022 &bull; Langley, BC</div>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.5rem; margin-bottom: 0;">
+                                Designed waterproof industrial controller enclosure in Fusion 360, KiCAD processor breakout PCB, and Linux kernel device tree overlays.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Teaser Row 3: Main/Academic Trunk -->
+                    <div class="git-commit">
+                        <div class="git-track">
+                            <svg class="git-svg-col" width="84" height="100%">
+                                <line x1="16" y1="0" x2="16" y2="100%" class="track-line-main" />
+                                <path d="M 16,28 C 16,10 72,10 72,0" class="track-line-team" fill="none" />
+                                <path d="M 16,28 C 16,10 44,10 44,0" class="track-line-coop" fill="none" />
+                                <circle cx="16" cy="28" r="7" class="node-main" />
+                            </svg>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">d6189bc</span>
+                                <span class="git-branch-pill branch-main">main</span>
+                                <span class="nav-badge" style="background-color: rgba(88, 166, 255, 0.1); border-color: rgba(88, 166, 255, 0.3); font-size: 0.72rem;">Academic Trunk</span>
+                            </div>
+                            <h3 class="git-commit-title" style="font-size: 1.15rem;">BASc. Mechatronic Systems Engineering &bull; Simon Fraser University</h3>
+                            <div class="git-commit-meta">Sep 2021 &ndash; Aug 2026 &bull; Surrey, BC</div>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.5rem; margin-bottom: 0;">
+                                Observer-based state-space control in MATLAB/Simulink, STM32 real-time embedded C firmware, PLC automation, and robotics kinematics.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div style="text-align: center;">
                     <a href="experience.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 1.75rem;">
-                        Open Full Interactive Git Graph Experience &rarr;
+                        Full Experience Timeline &rarr;
                     </a>
                 </div>
             </section>
