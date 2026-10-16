@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Engineering Projects | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="education.html" class="nav-link">Education</a></li>
+                        <li><a href="music.html" class="nav-link">Music</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1 class="page-title">Engineering Projects Archive</h1>
+                <p class="page-subtitle">
+                    Complete portfolio of mechanical, electrical, and embedded software projects. Toggle between gallery, dense list, or chronological timeline views.
+                </p>
+            </header>
+
+            <main class="page-body">
+                <!-- View Controls Bar: Discipline Filter & View Switcher -->
+                <div class="view-controls-bar">
+                    <!-- Discipline Filter Bar -->
+                    <div class="filter-bar" style="margin-bottom: 0;">
+                        <button class="filter-btn active" data-filter="all">All Disciplines</button>
+                        <button class="filter-btn" data-filter="mechanical">Mechanical Hardware</button>
+                        <button class="filter-btn" data-filter="electrical">Electrical Hardware</button>
+                        <button class="filter-btn" data-filter="software">Software / Firmware</button>
+                        <button class="filter-btn filter-btn-featured" data-filter="featured">&#x2605; Featured Only</button>
+                    </div>
+
+                    <!-- View Switcher -->
+                    <div class="view-toggle-group">
+                        <button class="view-toggle-btn active" data-view="gallery-view">
+                            <span>&#x229E;</span> Gallery View
+                        </button>
+                        <button class="view-toggle-btn" data-view="list-view">
+                            <span>&#x2630;</span> List View
+                        </button>
+                        <button class="view-toggle-btn" data-view="timeline-view">
+                            <span>&#x25F7;</span> Timeline View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ==========================================================
+                     VIEW 1: GALLERY VIEW (Active by default)
+                     ========================================================== -->
+                <div id="gallery-view" class="view-container active">
+                    <div class="project-grid">
+
+                        <!-- M1: 6DOF Robot Arm -->
+                        <article class="project-card" data-featured="true" data-category="mechanical" data-tags="robotics kinematics stepper solidworks">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                                    <span class="badge-featured">&#x2605; Featured</span>
+                                </div>
+                                <h3 class="card-title">6DOF Articulated Robot Arm</h3>
+                                <p class="card-description">
+                                    Multi-axis robotic manipulator engineered with custom joint linkages, stepper motor drives, and hall-effect encoders for closed-loop position feedback. Implemented forward and inverse kinematics algorithms in C++ for spatial trajectory planning.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">SolidWorks</span>
+                                    <span class="tag">Kinematics</span>
+                                    <span class="tag">Stepper Motors</span>
+                                    <span class="tag">Hall Encoders</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/6dof-robot-arm.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- M2: Hydraulic Robot Arm -->
+                        <article class="project-card" data-featured="false" data-category="mechanical" data-tags="fluid-power cad 3d-printing">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                                </div>
+                                <h3 class="card-title">Hydraulic Robotic Manipulator</h3>
+                                <p class="card-description">
+                                    Fluid-power robotic arm designed with custom mechanical advantage linkages and fluid cylinders. Modeled in Autodesk Inventor, validated with torque/pressure calculations, and manufactured via PLA 3D printing. Led project scheduling via Gantt/burn-down tracking.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">Autodesk Inventor</span>
+                                    <span class="tag">Fluid Power</span>
+                                    <span class="tag">3D Printing</span>
+                                    <span class="tag">Gantt Planning</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/hydraulic-arm.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- M3: Promag Telemetry Enclosure -->
+                        <article class="project-card" data-featured="false" data-category="mechanical" data-tags="fusion360 dfm enclosure industrial">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                                </div>
+                                <h3 class="card-title">Industrial Telemetry Enclosure</h3>
+                                <p class="card-description">
+                                    Engineered a waterproof, ruggedized IP-rated enclosure for an industrial environmental telemetry controller at Promag Enviro Systems. Modeled in Fusion 360, performed tolerance analysis, and interfaced directly with injection molding and CNC fabrication vendors.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">Fusion 360</span>
+                                    <span class="tag">DFM</span>
+                                    <span class="tag">IP Waterproofing</span>
+                                    <span class="tag">Vendor Sourcing</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/telemetry-enclosure.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- E1: Bionic Hand Power & Sensor PCBs -->
+                        <article class="project-card" data-featured="true" data-category="electrical" data-tags="kicad pcb smd power-distribution">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                                    <span class="badge-featured">&#x2605; Featured</span>
+                                </div>
+                                <h3 class="card-title">Bionic Hand Power &amp; Sensor PCBs</h3>
+                                <p class="card-description">
+                                    Multi-board PCB architecture for a 7DOF prosthetic hand under EWB SFU Bionics. Designed schematics and layouts in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards. Performed SMD soldering and hardware-in-the-loop verification.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">KiCAD</span>
+                                    <span class="tag">PCB Layout</span>
+                                    <span class="tag">SMD Soldering</span>
+                                    <span class="tag">Power Regulators</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/bionic-hand.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- E2: Promag i.MX8MM Custom Expansion PCB -->
+                        <article class="project-card" data-featured="false" data-category="electrical" data-tags="kicad spi uart imx8mm">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                                </div>
+                                <h3 class="card-title">i.MX8MM Processor Expansion PCB</h3>
+                                <p class="card-description">
+                                    Designed and specified components for a custom PCB interfacing high-speed SPI and UART peripheral buses to an NXP i.MX8M Mini application processor at Promag Enviro Systems. Validated signal integrity using high-bandwidth oscilloscopes and logic analyzers.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">KiCAD</span>
+                                    <span class="tag">SPI &amp; UART</span>
+                                    <span class="tag">Oscilloscope</span>
+                                    <span class="tag">NXP i.MX8MM</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/imx8mm-board.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- E3: Automatic Optoelectronic Folder -->
+                        <article class="project-card" data-featured="false" data-category="electrical" data-tags="schematic i2c sensors servo">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                                </div>
+                                <h3 class="card-title">Optoelectronic Automated Folder</h3>
+                                <p class="card-description">
+                                    Designed electrical schematic and wire routing for an automated folding machine prototype. Integrated an I2C communication bus, ambient light-dependent resistors (LDRs), limit switches, and pulse-width modulated servo drivers into an Arduino microcontroller.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">AutoCAD</span>
+                                    <span class="tag">I2C Bus</span>
+                                    <span class="tag">Optoelectronics</span>
+                                    <span class="tag">Servo Actuation</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/auto-folder.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- S1: STM32 Line Follower -->
+                        <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal stm32 pid adc">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-software">Software / Firmware</span>
+                                    <span class="badge-featured">&#x2605; Featured</span>
+                                </div>
+                                <h3 class="card-title">STM32 Line Follower Robot</h3>
+                                <p class="card-description">
+                                    Real-time autonomous differential-drive robot built on an STM32 ARM Cortex microcontroller. Engineered bare-metal C register-level peripheral drivers, DMA multi-channel ADC optical array scanning, and real-time digital PID feedback steering control.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">Bare-Metal C</span>
+                                    <span class="tag">STM32</span>
+                                    <span class="tag">PID Control</span>
+                                    <span class="tag">ADC &amp; PWM</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/stm32-line-follower.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- S2: Bionic Hand HAL -->
+                        <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal hal emg cpp">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-software">Software / Firmware</span>
+                                    <span class="badge-featured">&#x2605; Featured</span>
+                                </div>
+                                <h3 class="card-title">Bionic Hand HAL Architecture</h3>
+                                <p class="card-description">
+                                    Designed a modular C/C++ Hardware Abstraction Layer (HAL) for an EMG-controlled prosthetic hand under EWB SFU Bionics. Abstracted low-level I2C/SPI sensor acquisition and PWM tendon actuation from high-level EMG envelope detection and grip state machines.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">C / C++</span>
+                                    <span class="tag">HAL Architecture</span>
+                                    <span class="tag">EMG Processing</span>
+                                    <span class="tag">State Machines</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/bionic-hand.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- S3: Linux Device Tree & Drivers -->
+                        <article class="project-card" data-featured="false" data-category="software" data-tags="linux device-tree kernel ssh">
+                            <div>
+                                <div class="card-header">
+                                    <span class="category-badge badge-software">Software / Firmware</span>
+                                </div>
+                                <h3 class="card-title">Embedded Linux Device Tree &amp; Drivers</h3>
+                                <p class="card-description">
+                                    Authored custom device tree nodes in the Linux kernel for an i.MX8MM processor at Promag Enviro Systems to bind custom SPI/UART hardware. Configured headless SSH server environments for remote continuous deployment and firmware testing.
+                                </p>
+                                <div class="card-tech">
+                                    <span class="tag">Embedded Linux</span>
+                                    <span class="tag">Device Tree</span>
+                                    <span class="tag">Kernel Modules</span>
+                                    <span class="tag">SSH / Git</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projects/linux-kernel-dev.html" class="project-link">
+                                    View Project Case Study &rarr;
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ==========================================================
+                     VIEW 2: LIST / TABLE VIEW
+                     ========================================================== -->
+                <div id="list-view" class="view-container">
+                    <div class="projects-table-card">
+                        <table class="projects-table">
+                            <thead>
+                                <tr>
+                                    <th>Timeline</th>
+                                    <th>Project Title</th>
+                                    <th>Discipline</th>
+                                    <th>Core Technologies &amp; Tools</th>
+                                    <th>Documentation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-category="electrical" data-featured="true">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2026</td>
+                                    <td class="table-proj-title">Bionic Hand Power &amp; Sensor PCBs</td>
+                                    <td><span class="category-badge badge-electrical">Electrical</span></td>
+                                    <td>KiCAD, Multi-layer PCB, SMD Soldering, DC-DC Regulators</td>
+                                    <td><a href="projects/bionic-hand.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="software" data-featured="true">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2026</td>
+                                    <td class="table-proj-title">Bionic Hand HAL Architecture</td>
+                                    <td><span class="category-badge badge-software">Software</span></td>
+                                    <td>Bare-Metal C/C++, HAL Architecture, EMG Filtering, State Machines</td>
+                                    <td><a href="projects/bionic-hand.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="mechanical" data-featured="true">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2025&ndash;Pres</td>
+                                    <td class="table-proj-title">6DOF Articulated Robot Arm</td>
+                                    <td><span class="category-badge badge-mechanical">Mechanical</span></td>
+                                    <td>SolidWorks, Inverse Kinematics, Stepper Motors, Hall Encoders</td>
+                                    <td><a href="projects/6dof-robot-arm.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="software" data-featured="true">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2024</td>
+                                    <td class="table-proj-title">STM32 Line Follower Robot</td>
+                                    <td><span class="category-badge badge-software">Software</span></td>
+                                    <td>STM32 ARM Cortex, Register C, Real-Time PID, DMA ADC</td>
+                                    <td><a href="projects/stm32-line-follower.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="electrical" data-featured="false">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2022</td>
+                                    <td class="table-proj-title">i.MX8MM Processor Expansion PCB</td>
+                                    <td><span class="category-badge badge-electrical">Electrical</span></td>
+                                    <td>KiCAD, NXP i.MX8MM, High-Speed SPI/UART, Logic Analyzers</td>
+                                    <td><a href="projects/imx8mm-board.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="mechanical" data-featured="false">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2022</td>
+                                    <td class="table-proj-title">Industrial Telemetry Enclosure</td>
+                                    <td><span class="category-badge badge-mechanical">Mechanical</span></td>
+                                    <td>Fusion 360, DFM, IP67 Waterproofing, GD&amp;T Prints</td>
+                                    <td><a href="projects/telemetry-enclosure.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="software" data-featured="false">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2022</td>
+                                    <td class="table-proj-title">Embedded Linux Device Tree &amp; Drivers</td>
+                                    <td><span class="category-badge badge-software">Software</span></td>
+                                    <td>Linux Kernel, Device Tree (.dts), SPI/UART Driver Binding, SSH</td>
+                                    <td><a href="projects/linux-kernel-dev.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="mechanical" data-featured="false">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2020</td>
+                                    <td class="table-proj-title">Hydraulic Robotic Manipulator</td>
+                                    <td><span class="category-badge badge-mechanical">Mechanical</span></td>
+                                    <td>Autodesk Inventor, Fluid Power Kinematics, 3D Printing PLA</td>
+                                    <td><a href="projects/hydraulic-arm.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                                <tr data-category="electrical" data-featured="false">
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">2020</td>
+                                    <td class="table-proj-title">Optoelectronic Automated Folder</td>
+                                    <td><span class="category-badge badge-electrical">Electrical</span></td>
+                                    <td>Arduino, AutoCAD, I2C Sensor Bus, LDR Sensors, Servo Actuation</td>
+                                    <td><a href="projects/auto-folder.html" class="project-link">View Case Study &rarr;</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ==========================================================
+                     VIEW 3: TIMELINE ROADMAP VIEW
+                     ========================================================== -->
+                <div id="timeline-view" class="view-container">
+                    <div class="projects-roadmap">
+
+                        <!-- 2026 Milestone -->
+                        <div class="roadmap-entry">
+                            <div class="roadmap-marker"></div>
+                            <div class="roadmap-year">2026 &ndash; Present &bull; Advanced Systems Integration</div>
+                            <div class="roadmap-cards-group">
+                                <div class="roadmap-card">
+                                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                        <span class="category-badge badge-electrical">Electrical</span>
+                                        <span class="category-badge badge-software">Software</span>
+                                        <span class="badge-featured">&#x2605; Featured</span>
+                                    </div>
+                                    <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                        EWB SFU Bionic Hand: Custom Power/Sensor PCBs &amp; C/C++ HAL
+                                    </h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                                        Leading cross-disciplinary integration for a 7DOF prosthetic hand. Routing high-current power distribution boards in KiCAD and architecting a clean, modular Hardware Abstraction Layer in C/C++.
+                                    </p>
+                                    <a href="projects/bionic-hand.html" class="project-link">Read Case Study &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2025 Milestone -->
+                        <div class="roadmap-entry">
+                            <div class="roadmap-marker"></div>
+                            <div class="roadmap-year">2025 &bull; Robotics Kinematics &amp; Industrial Systems</div>
+                            <div class="roadmap-cards-group">
+                                <div class="roadmap-card">
+                                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                        <span class="category-badge badge-mechanical">Mechanical</span>
+                                        <span class="badge-featured">&#x2605; Featured</span>
+                                    </div>
+                                    <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                        6DOF Articulated Robot Arm
+                                    </h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                                        SolidWorks structural joint modeling, preloaded bearing housings, stepper motor gearboxes, and C++ analytical/numerical inverse kinematics.
+                                    </p>
+                                    <a href="projects/6dof-robot-arm.html" class="project-link">Read Case Study &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2024 Milestone -->
+                        <div class="roadmap-entry">
+                            <div class="roadmap-marker"></div>
+                            <div class="roadmap-year">2024 &bull; Embedded Control &amp; Microcontrollers</div>
+                            <div class="roadmap-cards-group">
+                                <div class="roadmap-card">
+                                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                        <span class="category-badge badge-software">Software</span>
+                                        <span class="badge-featured">&#x2605; Featured</span>
+                                    </div>
+                                    <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                        STM32 Autonomous Line Follower Robot
+                                    </h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                                        Bare-metal C register configuration, DMA multi-channel ADC circular buffering, and tuned 1.0 ms real-time digital PID feedback steering loop.
+                                    </p>
+                                    <a href="projects/stm32-line-follower.html" class="project-link">Read Case Study &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2022 Milestone -->
+                        <div class="roadmap-entry">
+                            <div class="roadmap-marker"></div>
+                            <div class="roadmap-year">2022 &bull; Industrial Product Development (Promag Enviro)</div>
+                            <div class="roadmap-cards-group">
+                                <div class="roadmap-card">
+                                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                        <span class="category-badge badge-electrical">Electrical</span>
+                                        <span class="category-badge badge-mechanical">Mechanical</span>
+                                    </div>
+                                    <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                        i.MX8MM Expansion PCB, Telemetry Enclosure &amp; Linux Kernel Drivers
+                                    </h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                                        Complete vertical hardware delivery: waterproof IP67 enclosure in Fusion 360, custom SPI/UART expansion daughterboard in KiCAD, and Linux kernel device tree binding.
+                                    </p>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <a href="projects/imx8mm-board.html" class="project-link">Expansion PCB &rarr;</a>
+                                        <a href="projects/telemetry-enclosure.html" class="project-link">Enclosure CAD &rarr;</a>
+                                        <a href="projects/linux-kernel-dev.html" class="project-link">Linux Kernel &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2020 Milestone -->
+                        <div class="roadmap-entry">
+                            <div class="roadmap-marker"></div>
+                            <div class="roadmap-year">2020 &bull; Capilano Engineering Capstones</div>
+                            <div class="roadmap-cards-group">
+                                <div class="roadmap-card">
+                                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                        <span class="category-badge badge-mechanical">Mechanical</span>
+                                        <span class="category-badge badge-electrical">Electrical</span>
+                                    </div>
+                                    <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                        Hydraulic Manipulator &amp; Optoelectronic Folding Machine
+                                    </h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                                        Led capstone student teams in fluid-power mechanical advantage design and Arduino-driven optoelectronic automated folding mechanics.
+                                    </p>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <a href="projects/hydraulic-arm.html" class="project-link">Hydraulic Arm &rarr;</a>
+                                        <a href="projects/auto-folder.html" class="project-link">Auto Folder &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="index.html#home" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="experience.html" class="footer-link">Experience</a>
+                    <a href="education.html" class="footer-link">Education</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
+

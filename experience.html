@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Work Experience &amp; Git Graph | Kenneth Tubungbanua</title>
+        <style>
+            .git-filter-bar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                padding: 0.85rem 1.25rem;
+                background-color: var(--bg-surface);
+                border: 1px solid var(--border-color);
+                border-bottom: none;
+                align-items: center;
+            }
+            .git-filter-pill {
+                font-family: var(--font-mono);
+                font-size: 0.78rem;
+                background: transparent;
+                border: 1px solid var(--border-color);
+                color: var(--text-secondary);
+                padding: 0.3rem 0.65rem;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+            .git-filter-pill:hover {
+                color: var(--text-primary);
+                border-color: var(--border-hover);
+            }
+            .git-filter-pill.active {
+                background-color: var(--tag-bg);
+                color: var(--accent);
+                border-color: var(--accent);
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="experience.html" class="nav-link active">Experience</a></li>
+                        <li><a href="education.html" class="nav-link">Education</a></li>
+                        <li><a href="music.html" class="nav-link">Music</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1 class="page-title">Career Experience &amp; Git Graph</h1>
+                <p class="page-subtitle">
+                    Visualized as an interactive Git commit log tracing mechanical diagnostics, embedded firmware development, and multi-disciplinary systems leadership.
+                </p>
+            </header>
+
+            <main class="page-body">
+                <!-- Terminal Title Bar -->
+                <div class="git-terminal-header">
+                    <div class="git-terminal-dots">
+                        <span class="git-dot red"></span>
+                        <span class="git-dot yellow"></span>
+                        <span class="git-dot green"></span>
+                    </div>
+                    <div>kenneth@sfu-mechatronics:~/career$ git log --graph --all --decorate</div>
+                    <div style="color: var(--accent);">&#x25C9; branch: main</div>
+                </div>
+
+                <!-- Branch Filter Bar -->
+                <div class="git-filter-bar">
+                    <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Filter Branch:</span>
+                    <button class="git-filter-pill active" data-branch="all">All Commits</button>
+                    <button class="git-filter-pill" data-branch="main">main (Core &amp; SFU)</button>
+                    <button class="git-filter-pill" data-branch="bionics">feature/bionics-leadership</button>
+                    <button class="git-filter-pill" data-branch="firmware">feature/embedded-firmware</button>
+                    <button class="git-filter-pill" data-branch="mechanics">feature/mechanics (MEC)</button>
+                </div>
+
+                <!-- Git Graph Log Container -->
+                <div class="git-graph-container">
+
+                    <!-- Commit 1: EWB SFU Bionics -->
+                    <div class="git-commit" data-branch="bionics">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node bionics"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">c8f94d2</span>
+                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
+                                <span class="git-branch-pill branch-main">HEAD -> main</span>
+                                <span class="badge-featured">&#x2605; Latest</span>
+                            </div>
+                            <h3 class="git-commit-title">Lead Systems Integrator &bull; EWB SFU Bionics Team</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Jan 2026 &ndash; Present &bull; Surrey, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Drafted the system concept and architecture for an underactuated, tendon-driven, EMG-controlled 7DOF prosthetic hand for transradial amputees.</li>
+                                <li>Coordinating multi-disciplinary efforts across 3 mechanical subteams, 1 electrical team, 1 biomedical team, and 1 software team.</li>
+                                <li>Designing and routing custom multi-board PCBs in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards.</li>
+                                <li>Created a modular C/C++ Hardware Abstraction Layer (HAL) for interfacing with servos, load cells, and magnetic joint encoders.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 2: MakerLabs -->
+                    <div class="git-commit" data-branch="bionics">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node bionics"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">b4a10e7</span>
+                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
+                            </div>
+                            <h3 class="git-commit-title">Electronics &amp; Soldering Instructor &bull; MakerLabs</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Feb 2026 &ndash; Present &bull; Vancouver, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Teach practical circuit analysis, Ohm's Law, breadboard prototyping, and electronic test instrumentation (DMM, power supply) to adult makers and youth.</li>
+                                <li>Lead hands-on soldering workshops covering wire splicing, through-hole (THT) assembly, and perfboard circuit construction.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 3: Takachar -->
+                    <div class="git-commit" data-branch="firmware">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node firmware"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">7f39d2c</span>
+                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
+                            </div>
+                            <h3 class="git-commit-title">Project Engineer (Technical Documentation) &bull; Takachar</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Sep 2025 &ndash; Dec 2025 &bull; Salmon Arm, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Developed a private, centralized technical documentation repository for multiple industrial biomass pyrolysis reactor models using MediaWiki.</li>
+                                <li>Built local XAMPP prototypes, performed namespace segregation, and created standardized templates for engineering documentation.</li>
+                                <li>Coordinated with system administrators to integrate the wiki into the company's official hosted infrastructure.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 4: Promag Enviro Systems -->
+                    <div class="git-commit" data-branch="firmware">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node firmware"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">4e819fa</span>
+                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
+                            </div>
+                            <h3 class="git-commit-title">Product Development Team (Hardware &amp; Firmware) &bull; Promag Enviro Systems</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: May 2022 &ndash; Dec 2022 &bull; Langley, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Designed a waterproof, rugged industrial enclosure for an environmental telemetry controller in Fusion 360; coordinated with parts manufacturers.</li>
+                                <li>Designed and specified components for a custom PCB in KiCAD to interface with SPI and UART buses of an NXP i.MX8MM processor.</li>
+                                <li>Authored device tree nodes in the Linux kernel to bind custom PCB peripherals and set up secure SSH continuous development servers.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 5: Merge Commit (Mechanics -> Main) -->
+                    <div class="git-commit" data-branch="merge">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node merge"></div>
+                        </div>
+                        <div class="git-commit-card" style="border-left: 3px solid #facc15;">
+                            <div class="git-commit-header">
+                                <span class="git-hash">a2c85e3</span>
+                                <span class="git-branch-pill branch-merge">merge: feature/mechanics &rarr; main</span>
+                            </div>
+                            <h3 class="git-commit-title">Merge Commit: Integrate mechanical diagnostic discipline into mechatronics</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Sep 2021 &bull; Transition Milestone
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                                Merged four years of hands-on mechanical troubleshooting, bearing overhaul, and hydraulic diagnostic techniques into the academic and embedded firmware development path at Simon Fraser University.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Commit 6: SFU Mechatronics -->
+                    <div class="git-commit" data-branch="main">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node main"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">d6189bc</span>
+                                <span class="git-branch-pill branch-main">main</span>
+                            </div>
+                            <h3 class="git-commit-title">BASc. Mechatronic Systems Engineering &bull; Simon Fraser University</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: 2021 &ndash; 2026 &bull; Surrey, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Specialized in <strong>Modern Control Systems</strong> (observer-based state-feedback controller for omnidirectional spherical robot in MATLAB/Simulink).</li>
+                                <li><strong>Industrial Control Systems:</strong> PLC state machines and discrete digital filtering in LogixPro.</li>
+                                <li><strong>Advanced Robotics Kinematics:</strong> DH parameter modeling, inverse kinematics solver, and workspace analysis in MATLAB.</li>
+                                <li><strong>Real-Time Embedded Systems:</strong> Register-level C firmware and real-time PID control on STM32 ARM Cortex.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 7: Nelson Avenue Church -->
+                    <div class="git-commit" data-branch="firmware">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node firmware"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">91e45da</span>
+                                <span class="git-branch-pill branch-firmware">origin/feature/av-broadcast</span>
+                            </div>
+                            <h3 class="git-commit-title">Livestream &amp; Audio Systems Technician &bull; Nelson Avenue Church</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: Mar 2020 &ndash; Present &bull; Burnaby, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Designed and implemented a multi-source video/audio broadcast network integrating soundboards, multiple camera feeds, and dedicated presentation computers.</li>
+                                <li>Assembled and calibrated custom workstation PCs based on software throughput requirements; authoring comprehensive operator manuals.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 8: Capilano University -->
+                    <div class="git-commit" data-branch="main">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node main"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">f39a18d</span>
+                                <span class="git-branch-pill branch-main">main</span>
+                            </div>
+                            <h3 class="git-commit-title">Engineering Transition Diploma &bull; Capilano University</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: 2018 &ndash; 2020 &bull; North Vancouver, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>Led engineering design capstone groups: designed and manufactured a hydraulic robot arm using mechanical advantage calculations and Inventor CAD; created an automatic optoelectronic T-shirt folding machine.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commit 9: MEC Bike Mechanic (Root Commit) -->
+                    <div class="git-commit" data-branch="mechanics">
+                        <div class="git-track">
+                            <div class="git-node mechanics"></div>
+                        </div>
+                        <div class="git-commit-card">
+                            <div class="git-commit-header">
+                                <span class="git-hash">1a789c0</span>
+                                <span class="git-branch-pill branch-mechanics">origin/feature/mechanics</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">[root-commit]</span>
+                            </div>
+                            <h3 class="git-commit-title">Bicycle Mechanic &amp; Clinic Instructor &bull; Mountain Equipment Company (MEC)</h3>
+                            <div class="git-commit-meta">
+                                Author: Kenneth Tubungbanua &bull; Date: 2016 &ndash; 2020 &bull; North Vancouver, BC
+                            </div>
+                            <ul class="git-commit-diff">
+                                <li>4 years of professional hands-on mechanical diagnostics, bearing overhauls, hydraulic disc brake servicing, and drivetrain tuning.</li>
+                                <li>Formulated a disciplined problem-solving procedure to isolate physical root causes efficiently under tight turnaround deadlines.</li>
+                                <li>Taught small-group mechanical clinics to educate customers on mechanical principles, maintenance, and diagnostics.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="index.html#home" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="education.html" class="footer-link">Education</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
+

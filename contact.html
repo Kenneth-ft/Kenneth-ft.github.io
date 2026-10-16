@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Contact &amp; Connect | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="education.html" class="nav-link">Education</a></li>
+                        <li><a href="music.html" class="nav-link">Music</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1 class="page-title">Get in Touch</h1>
+                <p class="page-subtitle">
+                    Interested in discussing hardware integration, embedded firmware, or engineering opportunities? Let's connect.
+                </p>
+            </header>
+
+            <main class="page-body">
+                <div class="contact-container">
+                    <!-- Left: Contact Details & Direct Links -->
+                    <div class="contact-info-card">
+                        <div>
+                            <h2 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.5rem;">Connect Directly</h2>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">
+                                Let's talk.
+                            </p>
+                        </div>
+
+                        <!-- LinkedIn Direct Link -->
+                        <div class="contact-method">
+                            <span class="contact-label">LinkedIn Profile</span>
+                            <a 
+                                href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="contact-value"
+                                style="color: var(--accent); display: inline-flex; align-items: center; gap: 0.35rem;"
+                            >
+                                linkedin &nearr;
+                            </a>
+                        </div>
+
+                        <!-- GitHub Profile -->
+                        <div class="contact-method">
+                            <span class="contact-label">GitHub Repository</span>
+                            <a 
+                                href="https://github.com/Kenneth-ft" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="contact-value"
+                            >
+                                github.com/Kenneth-ft &nearr;
+                            </a>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="contact-method">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Burnaby, BC, Canada</span>
+                        </div>
+
+                        <!-- University Affiliation -->
+                        <!--
+                        <div class="contact-method">
+                            <span class="contact-label">Academic Affiliation</span>
+                            <span class="contact-value">Simon Fraser University &bull; School of Mechatronic Systems Engineering</span>
+                        </div>
+                    -->
+                        <div style="margin-top: 1rem;">
+                            <a 
+                                href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="btn btn-primary"
+                                style="width: 100%; justify-content: center;"
+                            >
+                                Message on LinkedIn &nearr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Contact Form -->
+                    <form class="contact-form" action="#" method="POST">
+                        <h2 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1.5rem;">Send a Message</h2>
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Jane Doe" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="jane.doe@example.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input" 
+                                placeholder="Engineering collaboration, inquiry, or question"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                placeholder="Hello Kenneth, I came across your portfolio and wanted to reach out regarding..." 
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Send Message &rarr;
+                        </button>
+
+                        <div class="form-feedback"></div>
+                    </form>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="index.html#home" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="experience.html" class="footer-link">Experience</a>
+                    <a href="education.html" class="footer-link">Education</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Embedded Linux Device Tree &amp; Drivers | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="../index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="../education.html" class="nav-link">Education</a></li>
+                        <li><a href="../music.html" class="nav-link">Music</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Header -->
+            <header class="page-header">
+                <div style="margin-bottom: 0.75rem;">
+                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                    <span class="category-badge badge-software">Software / Firmware</span>
+                </div>
+                <h1 class="page-title">Embedded Linux Device Tree &amp; Drivers</h1>
+                <p class="page-subtitle">
+                    Authored custom device tree nodes in the Linux kernel on an NXP i.MX8MM processor at Promag Enviro Systems to bind SPI and UART telemetry hardware with automated SSH deployment.
+                </p>
+
+                <div class="project-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Promag Enviro Systems</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Product Development Team</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Processor</span>
+                        <span class="meta-value">NXP i.MX8M Mini (ARM Cortex-A53)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Environment</span>
+                        <span class="meta-value">Embedded Linux Kernel, Device Tree Source (DTS), SSH</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-body">
+                <article class="prose">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Connecting custom hardware to an embedded Linux single-board computer requires communicating with the operating system at the kernel level. At Promag Enviro Systems, I configured Linux kernel device trees to describe non-discoverable SPI and UART hardware peripherals on a custom daughterboard, enabling user-space software to read telemetry reliably.
+                    </p>
+
+                    <h2>Device Tree Architecture &amp; Driver Binding</h2>
+                    <ul>
+                        <li><strong>Device Tree Source (.dts / .dtsi):</strong> Defined bus speed, chip select pins, interrupt request (IRQ) lines, and compatible driver bindings for on-board peripheral ICs attached to the i.MX8MM processor.</li>
+                        <li><strong>Kernel Module Verification:</strong> Compiled and loaded kernel drivers (spidev, serial drivers), ensuring proper pinmux allocation in the IOMUXC controller without pin contention.</li>
+                        <li><strong>Userspace Hardware Verification:</strong> Wrote C test utilities using <code>ioctl()</code> calls to transmit test packets across SPI and UART, confirming loopback integrity with a logic analyzer.</li>
+                    </ul>
+
+                    <h2>Automated Remote Development Toolchain</h2>
+                    <p>
+                        Configured an authenticated, secure SSH server directly on the target hardware. Built automated deployment scripts via Make and Git so firmware developers could cross-compile on host machines, push binaries over network sockets, and inspect live <code>dmesg</code> kernel ring buffers in real time.
+                    </p>
+                </article>
+
+                <div class="project-gallery-grid">
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4DC; Device Tree Source (.dts)</span>
+                        <span style="font-size: 0.75rem;">Pinmux definitions &amp; SPI controller configuration</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4BB; Terminal &amp; dmesg Log</span>
+                        <span style="font-size: 0.75rem;">Kernel driver binding &amp; hardware probe output</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F517; Remote SSH Workflow</span>
+                        <span style="font-size: 0.75rem;">Automated compilation, scp transfer &amp; unit tests</span>
+                    </div>
+                </div>
+
+                <div class="project-nav-footer">
+                    <a href="auto-folder.html" class="btn btn-secondary">&larr; Previous: Auto Folder</a>
+                    <a href="../index.html#projects" class="btn btn-primary">Back to All Projects &uarr;</a>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="../index.html#home" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+

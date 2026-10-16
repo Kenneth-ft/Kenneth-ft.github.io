@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Optoelectronic Automated Folder | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="../index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="../education.html" class="nav-link">Education</a></li>
+                        <li><a href="../music.html" class="nav-link">Music</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Header -->
+            <header class="page-header">
+                <div style="margin-bottom: 0.75rem;">
+                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                    <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                </div>
+                <h1 class="page-title">Optoelectronic Automated Folder</h1>
+                <p class="page-subtitle">
+                    Automated mechatronic folding system utilizing AutoCAD technical drawings, an Arduino microcontroller, I2C sensor bus, LDR light sensors, and multi-servo actuation.
+                </p>
+
+                <div class="project-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Project Lead &amp; Systems Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Institution</span>
+                        <span class="meta-value">Capilano University &bull; Engineering Design</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Microcontroller</span>
+                        <span class="meta-value">Arduino / ATmega328P</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Sensors &amp; Actuation</span>
+                        <span class="meta-value">LDRs, Limit Switches, PWM Servos, I2C Bus</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-body">
+                <article class="prose">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Designed and built an automated mechatronic folding machine designed to standardize and speed up garment handling. The machine automatically detects the presence and placement of material using optoelectronic light sensors, executing a synchronized folding cycle through an array of motorized folding paddles.
+                    </p>
+
+                    <h2>Electrical &amp; Sensor Integration</h2>
+                    <ul>
+                        <li><strong>Optoelectronic Detection:</strong> Array of ambient light-dependent resistors (LDRs) and momentary limit switches connected across an I2C communication bus to detect item boundary placement without physical interference.</li>
+                        <li><strong>Multi-Servo Power Stage:</strong> Designed an independent external 5V regulator power bus to prevent servo inrush currents from resetting the microcontroller logic.</li>
+                        <li><strong>Schematics &amp; Wiring:</strong> Drafted complete wiring harness schematics and a detailed Bill of Materials (BOM) in AutoCAD.</li>
+                    </ul>
+
+                    <h2>Mechanical Paddle Kinematics</h2>
+                    <p>
+                        Engineered sequential folding panels actuated by high-torque servos. Formulated a weighted design selection matrix to evaluate panel materials (acrylic vs. corrugated composite) based on rigidity, weight, and friction coefficients against fabric.
+                    </p>
+                </article>
+
+                <div class="project-gallery-grid">
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4D0; AutoCAD Wiring Diagram</span>
+                        <span style="font-size: 0.75rem;">I2C bus, optoelectronics &amp; power distribution</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x2699; Folding Panel Mechanism</span>
+                        <span style="font-size: 0.75rem;">Servo linkage geometry &amp; hinge placement</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x2705; Working Prototype</span>
+                        <span style="font-size: 0.75rem;">Automated cycle execution triggered by LDR sensor</span>
+                    </div>
+                </div>
+
+                <div class="project-nav-footer">
+                    <a href="hydraulic-arm.html" class="btn btn-secondary">&larr; Previous: Hydraulic Arm</a>
+                    <a href="linux-kernel-dev.html" class="btn btn-primary">Next Project: Linux Kernel Dev &rarr;</a>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="../index.html#home" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+

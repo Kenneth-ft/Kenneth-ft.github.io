@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>STM32 Line Follower Robot | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="../index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="../education.html" class="nav-link">Education</a></li>
+                        <li><a href="../music.html" class="nav-link">Music</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Header -->
+            <header class="page-header">
+                <div style="margin-bottom: 0.75rem;">
+                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                    <span class="category-badge badge-software">Software / Firmware</span>
+                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                    <span class="badge-featured">&#x2605; Featured Project</span>
+                </div>
+                <h1 class="page-title">STM32 Real-Time Line Follower Robot</h1>
+                <p class="page-subtitle">
+                    Autonomous high-speed differential-drive robot engineered with bare-metal C register-level peripheral drivers, DMA multi-channel ADC scanning, and real-time digital PID feedback steering control.
+                </p>
+
+                <div class="project-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Embedded Systems &amp; Controls Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Coursework</span>
+                        <span class="meta-value">RT/ET Control Systems &bull; SFU</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Microcontroller</span>
+                        <span class="meta-value">STM32 (ARM Cortex-M)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Key Techniques</span>
+                        <span class="meta-value">Register-Level C, DMA, PID, PWM Motor Drives</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-body">
+                <article class="prose">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed as the capstone project for <em>Real-Time and Embedded Control Systems</em> at Simon Fraser University, this autonomous mobile robot tracks complex high-speed line trajectories with minimal lateral error. Rather than relying on high-level vendor libraries (like Arduino or standard HAL wrappers), all microcontroller peripheral initialization and timing routines were written in <strong>bare-metal C using direct register manipulation</strong>.
+                    </p>
+
+                    <h2>Bare-Metal Firmware Architecture</h2>
+                    <ul>
+                        <li><strong>Register-Level Peripheral Setup:</strong> Configured clocks (RCC), general-purpose I/O (GPIO), nested vector interrupt controllers (NVIC), hardware timers (TIM), and analog-to-digital converters (ADC) through direct memory-mapped register writes.</li>
+                        <li><strong>DMA Multi-Channel Sampling:</strong> Used Direct Memory Access (DMA) to continuously stream 8-channel optical reflectance sensor values into a circular RAM buffer with zero CPU overhead.</li>
+                        <li><strong>Deterministic 1 kHz Control Loop:</strong> Configured a dedicated hardware timer to fire a high-priority interrupt every 1.0 ms to compute weighted line position and update motor PWM duty cycles.</li>
+                    </ul>
+
+                    <h2>Digital PID Feedback Control Tuning</h2>
+                    <p>
+                        The steering control law calculates the robot's error offset \(\epsilon(t)\) from the track center:
+                    </p>
+                    <ul>
+                        <li><strong>Proportional Term (\(K_p\)):</strong> Generates restoring torque proportional to lateral displacement.</li>
+                        <li><strong>Derivative Term (\(K_d\)):</strong> Anticipates trajectory inflection and damps overshoot during sharp S-bends using filtered finite differences.</li>
+                        <li><strong>Integral Term (\(K_i\)):</strong> Eliminates steady-state drift on prolonged banked curves, paired with anti-windup clamping to prevent actuator saturation.</li>
+                    </ul>
+
+                    <h2>Hardware &amp; Power Electronics</h2>
+                    <p>
+                        Integrated an optical reflectance sensor bar with dual H-bridge DC motor drivers. Implemented hardware decoupling capacitors and flyback diode protection to isolate motor inductive switching noise from the sensitive 3.3V microcontroller logic rail.
+                    </p>
+
+                    <h2>Project Gallery</h2>
+                </article>
+
+                <div class="project-gallery-grid">
+                    <div class="gallery-placeholder">
+                        <span>&#x1F697; Physical Robot Chassis</span>
+                        <span style="font-size: 0.75rem;">Differential drive chassis, sensor array &amp; STM32 board</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4BB; Register-Level C Code</span>
+                        <span style="font-size: 0.75rem;">Timer PWM generation &amp; DMA circular buffer ISR</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4CA; PID Telemetry Plot</span>
+                        <span style="font-size: 0.75rem;">Error response curve &amp; settling time analysis</span>
+                    </div>
+                </div>
+
+                <div class="project-nav-footer">
+                    <a href="6dof-robot-arm.html" class="btn btn-secondary">&larr; Previous: 6DOF Robot Arm</a>
+                    <a href="imx8mm-board.html" class="btn btn-primary">Next Project: i.MX8MM Board &rarr;</a>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="../index.html#home" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+

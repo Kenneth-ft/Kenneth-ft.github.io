@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>6DOF Articulated Robot Arm | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="../index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="../education.html" class="nav-link">Education</a></li>
+                        <li><a href="../music.html" class="nav-link">Music</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Header -->
+            <header class="page-header">
+                <div style="margin-bottom: 0.75rem;">
+                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                    <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                    <span class="category-badge badge-software">Software / Firmware</span>
+                    <span class="badge-featured">&#x2605; Featured Project</span>
+                </div>
+                <h1 class="page-title">6DOF Articulated Robot Arm</h1>
+                <p class="page-subtitle">
+                    Six-axis robotic manipulator engineered with custom structural joint linkages, stepper motor actuation, closed-loop hall-effect encoder feedback, and C++ inverse kinematics.
+                </p>
+
+                <div class="project-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Lead Designer &amp; Firmware Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Advanced Robotics Engineering</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2025 &ndash; Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Disciplines</span>
+                        <span class="meta-value">Kinematics, CAD / SolidWorks, Closed-Loop Control</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">SolidWorks, C++, MATLAB, Stepper Drivers, Hall Encoders</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-body">
+                <article class="prose">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This project focuses on the ground-up mechanical design and embedded control of a 6-degree-of-freedom (6DOF) articulated serial robotic manipulator. Unlike hobbyist servo arms that lack rigidity and position feedback, this manipulator is engineered with planetary gearbox reduction, NEMA stepper motors, and magnetic hall-effect absolute encoders on each joint for closed-loop motion control.
+                    </p>
+
+                    <h2>Kinematic Modeling &amp; Mathematical Analysis</h2>
+                    <p>
+                        Building on technical coursework in <em>Advanced Kinematics for Robotic Systems</em>, the manipulator's geometry was modeled using standardized robotic conventions:
+                    </p>
+                    <ul>
+                        <li><strong>Denavit-Hartenberg (DH) Parameters:</strong> Formulated DH parameter frames for all 6 joints to calculate the forward kinematic homogeneous transformation matrices \($T_0^6$\).</li>
+                        <li><strong>Inverse Kinematics Solver:</strong> Implemented analytical and numerical inverse kinematics in C++ to translate arbitrary Cartesian coordinate goals \((X, Y, Z, \text{Roll}, \text{Pitch}, \text{Yaw})\) into corresponding joint angles \(\theta_1\) through \(\theta_6\).</li>
+                        <li><strong>Singularity &amp; Workspace Analysis:</strong> Simulated boundary conditions in MATLAB to avoid wrist and shoulder kinematic singularities where joint velocities diverge.</li>
+                    </ul>
+
+                    <h2>Mechanical Design &amp; Bearing Integration</h2>
+                    <p>
+                        Leveraging four years of mechanical bearing overhaul and bicycle diagnostics:
+                    </p>
+                    <ul>
+                        <li><strong>Thrust &amp; Radial Bearing Preloading:</strong> Designed custom dual angular-contact bearing housings for the shoulder and elbow joints to absorb high moment loads without joint deflection.</li>
+                        <li><strong>Torsional Stiffness:</strong> Reinforced 3D printed PETG/PLA structural shells with aluminum standoffs to ensure zero backlash under high accelerations.</li>
+                        <li><strong>Modular End-Effector:</strong> Designed a quick-change mechanical flange allowing interchangeable mechanical grippers, vacuum suction cups, or pen plotting attachments.</li>
+                    </ul>
+
+                    <h2>Project Gallery</h2>
+                </article>
+
+                <div class="project-gallery-grid">
+                    <div class="gallery-placeholder">
+                        <span>&#x1F527; SolidWorks 3D Assembly</span>
+                        <span style="font-size: 0.75rem;">Full 6DOF linkage, gearbox &amp; motor integration</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4D0; DH Coordinate Frames</span>
+                        <span style="font-size: 0.75rem;">Transformation matrices &amp; workspace boundary simulation</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x2699; Stepper &amp; Encoder Wiring</span>
+                        <span style="font-size: 0.75rem;">Hall-effect magnetic sensor PCB &amp; cable routing</span>
+                    </div>
+                </div>
+
+                <div class="project-nav-footer">
+                    <a href="bionic-hand.html" class="btn btn-secondary">&larr; Previous: Bionic Hand</a>
+                    <a href="stm32-line-follower.html" class="btn btn-primary">Next Project: STM32 Line Follower &rarr;</a>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="../index.html#home" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+

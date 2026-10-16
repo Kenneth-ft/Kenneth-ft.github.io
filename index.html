@@ -2,15 +2,528 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content ="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Kenneth Tubungbanua | Mechatronics &amp; Embedded Systems</title>
     </head>
     <body>
-        <h1>
-            Hello World!
-        </h1>
-        <p>
-            this is my first pages site
-        </p>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="education.html" class="nav-link">Education</a></li>
+                        <li><a href="music.html" class="nav-link">Music</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Hero / Home Section -->
+            <header class="hero" id="home">
+                <div class="hero-layout">
+                    <!-- Profile Picture (Left of Blurb) -->
+                    <div class="hero-avatar-wrapper">
+                        <img 
+                            src="images/profile.jpg" 
+                            onerror="this.onerror=null; this.src='images/profile-placeholder.svg';" 
+                            alt="Kenneth Tubungbanua" 
+                            class="hero-avatar"
+                        >
+                    </div>
+
+                    <!-- Hero Content / Blurb (Right of Profile Pic) -->
+                    <div class="hero-content">
+                        <p class="hero-subtitle">Mechatronic Systems Engineering &bull; Simon Fraser University</p>
+                        <h1 class="hero-title">Kenneth Tubungbanua</h1>
+                        <p class="hero-bio">
+                            write something meaningful here
+                        </p>
+                        <div class="hero-tags">
+                            <!--
+                            <span class="tag">Bare-Metal C/C++</span>
+                            <span class="tag">STM32 / ARM Cortex</span>
+                            <span class="tag">KiCAD PCB Design</span>
+                            <span class="tag">Robotics &amp; Kinematics</span>
+                            <span class="tag">Embedded Linux &amp; Device Tree</span>
+                            <span class="tag">SolidWorks / Fusion 360</span>
+                            <span class="tag">Machine Shop Tools</span>
+                        -->
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">View Projects &darr;</a>
+                            <a href="about.html" class="btn btn-secondary">About My Background &rarr;</a>
+                            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Projects Section -->
+            <section class="projects" id="projects">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-desc">
+                        Highlighting flagship systems in mechatronics, embedded firmware, and robotics.
+                    </p>
+                </div>
+
+                <!-- Featured Project Gallery Grid -->
+                <div class="project-grid">
+
+                    <!-- Project 1: 6DOF Robot Arm -->
+                    <article class="project-card" data-featured="true" data-category="mechanical" data-tags="robotics kinematics stepper solidworks">
+                        <div>
+                            <div class="card-header">
+                                <span class="category-badge badge-mechanical">Mechanical Hardware</span>
+                                <span class="badge-featured">&#x2605; Featured</span>
+                            </div>
+                            <h3 class="card-title">6DOF Articulated Robot Arm</h3>
+                            <p class="card-description">
+                                Multi-axis robotic manipulator engineered with custom joint linkages, stepper motor drives, and hall-effect encoders for closed-loop position feedback. Implemented forward and inverse kinematics algorithms in C++ for spatial trajectory planning.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tag">SolidWorks</span>
+                                <span class="tag">Kinematics</span>
+                                <span class="tag">Stepper Motors</span>
+                                <span class="tag">Hall Encoders</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projects/6dof-robot-arm.html" class="project-link">
+                                View Case Study &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Bionic Hand Power & Sensor PCBs -->
+                    <article class="project-card" data-featured="true" data-category="electrical" data-tags="kicad pcb smd power-distribution">
+                        <div>
+                            <div class="card-header">
+                                <span class="category-badge badge-electrical">Electrical Hardware</span>
+                                <span class="badge-featured">&#x2605; Featured</span>
+                            </div>
+                            <h3 class="card-title">Bionic Hand Power &amp; Sensor PCBs</h3>
+                            <p class="card-description">
+                                Multi-board PCB architecture for a 7DOF prosthetic hand under EWB SFU Bionics. Designed schematics and layouts in KiCAD for high-current power distribution, sensor multiplexing, and MCU daughterboards. Performed SMD soldering and hardware-in-the-loop verification.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tag">KiCAD</span>
+                                <span class="tag">PCB Layout</span>
+                                <span class="tag">SMD Soldering</span>
+                                <span class="tag">Power Regulators</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projects/bionic-hand.html" class="project-link">
+                                View Case Study &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: STM32 Line Follower -->
+                    <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal stm32 pid adc">
+                        <div>
+                            <div class="card-header">
+                                <span class="category-badge badge-software">Software / Firmware</span>
+                                <span class="badge-featured">&#x2605; Featured</span>
+                            </div>
+                            <h3 class="card-title">STM32 Line Follower Robot</h3>
+                            <p class="card-description">
+                                Real-time autonomous differential-drive robot built on an STM32 ARM Cortex microcontroller. Engineered bare-metal C register-level peripheral drivers, DMA multi-channel ADC optical array scanning, and real-time digital PID feedback steering control.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tag">Bare-Metal C</span>
+                                <span class="tag">STM32</span>
+                                <span class="tag">PID Control</span>
+                                <span class="tag">ADC &amp; PWM</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projects/stm32-line-follower.html" class="project-link">
+                                View Case Study &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Bionic Hand HAL Architecture -->
+                    <article class="project-card" data-featured="true" data-category="software" data-tags="bare-metal hal emg cpp">
+                        <div>
+                            <div class="card-header">
+                                <span class="category-badge badge-software">Software / Firmware</span>
+                                <span class="badge-featured">&#x2605; Featured</span>
+                            </div>
+                            <h3 class="card-title">Bionic Hand HAL Architecture</h3>
+                            <p class="card-description">
+                                Designed a modular C/C++ Hardware Abstraction Layer (HAL) for an EMG-controlled prosthetic hand under EWB SFU Bionics. Abstracted low-level I2C/SPI sensor acquisition and PWM tendon actuation from high-level EMG envelope detection and grip state machines.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tag">C / C++</span>
+                                <span class="tag">HAL Architecture</span>
+                                <span class="tag">EMG Processing</span>
+                                <span class="tag">State Machines</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projects/bionic-hand.html" class="project-link">
+                                View Case Study &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Callout to Dedicated Projects Page -->
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background-color: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: 8px;">
+                    <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">Looking for all engineering projects?</h3>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.25rem; font-size: 0.95rem;">
+                        Explore our complete archive of mechanical enclosures, fluid-power robotics, optoelectronic automation, and embedded Linux device tree drivers across gallery, list, and roadmap timeline views.
+                    </p>
+                    <a href="projects.html" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.7rem 1.5rem;">
+                        View All Projects (Gallery, List &amp; Timeline Views) &rarr;
+                    </a>
+                </div>
+            </section>
+
+            <!-- Experience Teaser Section (Linking to dedicated experience.html) -->
+            <section class="experience" id="experience">
+                <div class="section-header">
+                    <h2 class="section-title">Career Experience &amp; Git Graph</h2>
+                    <p class="section-desc">
+                        My career trajectory is tracked as an interactive Git commit log bridging hands-on mechanical diagnostics, firmware development, and systems leadership.
+                    </p>
+                </div>
+
+                <!-- Terminal Header Teaser -->
+                <div class="git-terminal-header">
+                    <div class="git-terminal-dots">
+                        <span class="git-dot red"></span>
+                        <span class="git-dot yellow"></span>
+                        <span class="git-dot green"></span>
+                    </div>
+                    <div>kenneth@sfu-mechatronics:~/career$ git log --graph --oneline -n 3</div>
+                    <div style="color: var(--accent);">&#x25C9; branch: main</div>
+                </div>
+
+                <!-- Terminal Teaser Body -->
+                <div class="git-graph-container" style="padding: 1.75rem; border-radius: 0 0 8px 8px; margin-bottom: 2rem;">
+                    <div class="git-commit" style="margin-bottom: 1rem;">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node bionics"></div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div>
+                                <span class="git-hash">c8f94d2</span>
+                                <span class="git-branch-pill branch-bionics">origin/feature/bionics</span>
+                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Lead Systems Integrator &bull; EWB SFU Bionics Team</strong>
+                            </div>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Architected 7DOF bionic hand, power/sensor PCBs, and modular C/C++ HAL.</span>
+                        </div>
+                    </div>
+
+                    <div class="git-commit" style="margin-bottom: 1rem;">
+                        <div class="git-track">
+                            <div class="git-line"></div>
+                            <div class="git-node firmware"></div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div>
+                                <span class="git-hash">4e819fa</span>
+                                <span class="git-branch-pill branch-firmware">origin/feature/firmware</span>
+                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Product Development Team &bull; Promag Enviro Systems</strong>
+                            </div>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Fusion 360 waterproof enclosure, i.MX8MM expansion PCB &amp; Linux kernel device trees.</span>
+                        </div>
+                    </div>
+
+                    <div class="git-commit">
+                        <div class="git-track">
+                            <div class="git-node merge"></div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <div>
+                                <span class="git-hash">a2c85e3</span>
+                                <span class="git-branch-pill branch-merge">merge: feature/mechanics &rarr; main</span>
+                                <strong style="color: var(--text-primary); margin-left: 0.5rem;">Merge: 4 Years MEC Bike Mechanic into Mechatronics</strong>
+                            </div>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Fused mechanical problem-solving and bearing/fluid diagnostics into engineering.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="experience.html" class="btn btn-primary" style="font-size: 1rem; padding: 0.75rem 1.75rem;">
+                        Open Full Interactive Git Graph Experience &rarr;
+                    </a>
+                </div>
+            </section>
+
+            <!-- Technical Skills Matrix -->
+            <section class="skills" id="skills">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills Matrix</h2>
+                    <p class="section-desc">
+                        Comprehensive competency breakdown spanning software, physical hardware, diagnostics, and shop machinery.
+                    </p>
+                </div>
+
+                <div class="skills-table-container">
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 20%;">Category</th>
+                                <th scope="col" style="width: 52%;">Skills, Tools &amp; Technologies</th>
+                                <th scope="col" style="width: 28%;">Practical Context &amp; Application</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1. Engineering -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--accent);"></span>
+                                        <span>Engineering</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">Systems Integration</span>
+                                        <span class="tag">Hardware-in-the-Loop (HIL)</span>
+                                        <span class="tag">Reverse Engineering</span>
+                                        <span class="tag">Design for Manufacturability (DFM)</span>
+                                        <span class="tag">Rapid Prototyping</span>
+                                        <span class="tag">Tolerance Stack Analysis</span>
+                                        <span class="tag">Technical SOPs</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Lead Systems Integrator (EWB SFU Bionics), Project Engineer (Takachar), Promag Enviro Systems
+                                </td>
+                            </tr>
+
+                            <!-- 2. Design -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--cat-mech);"></span>
+                                        <span>Design</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">SolidWorks</span>
+                                        <span class="tag">Autodesk Fusion 360</span>
+                                        <span class="tag">Autodesk Inventor</span>
+                                        <span class="tag">AutoCAD</span>
+                                        <span class="tag">KiCAD EDA</span>
+                                        <span class="tag">Altium Designer</span>
+                                        <span class="tag">Ultimaker Cura (3D Slicing)</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    7DOF prosthetic hand chassis, waterproof IP telemetry controller enclosures, custom MCU breakout PCBs
+                                </td>
+                            </tr>
+
+                            <!-- 3. Programming -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--cat-soft);"></span>
+                                        <span>Programming</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">Bare-Metal C</span>
+                                        <span class="tag">C++</span>
+                                        <span class="tag">Python</span>
+                                        <span class="tag">ARM Cortex-M Assembly</span>
+                                        <span class="tag">Linux Shell / Bash</span>
+                                        <span class="tag">Arduino</span>
+                                        <span class="tag">Git / GitHub</span>
+                                        <span class="tag">Make / GCC</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    STM32 register-level peripheral drivers, modular C++ HAL architecture, Linux kernel device tree overlays
+                                </td>
+                            </tr>
+
+                            <!-- 4. Analysis -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--cat-elec);"></span>
+                                        <span>Analysis</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">MATLAB &amp; Simulink</span>
+                                        <span class="tag">Multisim</span>
+                                        <span class="tag">LTSpice</span>
+                                        <span class="tag">Digital Oscilloscopes</span>
+                                        <span class="tag">Logic Analyzers (SPI/I2C/UART/CAN)</span>
+                                        <span class="tag">Digital Multimeter (DMM)</span>
+                                        <span class="tag">Function Generators</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Signal integrity diagnostics, bus protocol decoding, EMG envelope filtering, state observer simulation
+                                </td>
+                            </tr>
+
+                            <!-- 5. Controls -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--accent);"></span>
+                                        <span>Controls</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">PID Feedback Control</span>
+                                        <span class="tag">State-Space Observers &amp; Pole Placement</span>
+                                        <span class="tag">Forward &amp; Inverse Kinematics (DH)</span>
+                                        <span class="tag">LogixPro PLC Ladder Logic</span>
+                                        <span class="tag">PWM Actuation &amp; Stepper Control</span>
+                                        <span class="tag">Quadrature / Hall Encoders</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Autonomous differential line follower, 4-floor elevator PLC state machine, 6DOF manipulator spatial trajectory
+                                </td>
+                            </tr>
+
+                            <!-- 6. Certifications -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: #facc15;"></span>
+                                        <span>Certifications</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">WHMIS Certified</span>
+                                        <span class="tag">SFU Machine Shop Safety</span>
+                                        <span class="tag">MakerLabs Certified Instructor</span>
+                                        <span class="tag">Professional Bicycle Mechanics</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Workplace hazardous materials compliance, university machine shop clearance, hands-on workshop instruction
+                                </td>
+                            </tr>
+
+                            <!-- 7. Woodworking -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: #d97706;"></span>
+                                        <span>Woodworking</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">Wood Lathe</span>
+                                        <span class="tag">Table Saw</span>
+                                        <span class="tag">Band Saw</span>
+                                        <span class="tag">Jointer</span>
+                                        <span class="tag">Thickness Planer</span>
+                                        <span class="tag">Drill Press</span>
+                                        <span class="tag">Router Table</span>
+                                        <span class="tag">Hand Chisels &amp; Planes</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Pattern prototyping, instrument fixtures, precision joinery, stock dimensioning, custom chassis frames
+                                </td>
+                            </tr>
+
+                            <!-- 8. Metalworking -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: #94a3b8;"></span>
+                                        <span>Metalworking</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">Metal Lathe</span>
+                                        <span class="tag">Spot Welder</span>
+                                        <span class="tag">Taps &amp; Dies (Thread Cutting)</span>
+                                        <span class="tag">Sheet Metal Shear &amp; Brake</span>
+                                        <span class="tag">Angle Grinder &amp; Deburring</span>
+                                        <span class="tag">Bench Grinder</span>
+                                        <span class="tag">Cold Cut Saw</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    Custom bronze/delrin bushings, precision shaft turning, battery pack spot welding, bracket fabrication
+                                </td>
+                            </tr>
+
+                            <!-- 9. Mechanical Tools -->
+                            <tr>
+                                <td>
+                                    <div class="skills-table-category">
+                                        <span class="skills-cat-dot" style="background-color: var(--cat-mech);"></span>
+                                        <span>Mechanical Tools</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skills-table-tags">
+                                        <span class="tag">Bearing Press &amp; Extractors</span>
+                                        <span class="tag">Click &amp; Beam Torque Wrenches</span>
+                                        <span class="tag">Dial &amp; Vernier Calipers</span>
+                                        <span class="tag">Micrometers</span>
+                                        <span class="tag">Hydraulic Bleed Systems</span>
+                                        <span class="tag">Suspension High-Pressure Pumps</span>
+                                        <span class="tag">Spoke Tensiometer &amp; Truing Stand</span>
+                                    </div>
+                                </td>
+                                <td class="skills-table-context">
+                                    4 years MEC bicycle shop diagnostics, cartridge bearing preload, hydraulic brake overhauls, wheel lace/truing
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Back to Top &uarr;</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="experience.html" class="footer-link">Experience</a>
+                    <a href="education.html" class="footer-link">Education</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/Kenneth-ft" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering &bull; Simon Fraser University</p>
+            </footer>
+        </div>
+
+        <!-- Vanilla JavaScript for Category Filtering & ScrollSpy -->
+        <script src="js/main.js"></script>
     </body>
 </html>

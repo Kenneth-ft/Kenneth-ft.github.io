@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>i.MX8MM Processor Expansion PCB | Kenneth Tubungbanua</title>
+    </head>
+    <body>
+        <!-- Persistent Sticky Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="../index.html#home" class="nav-brand">
+                    <span>Kenneth Tubungbanua</span>
+                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                        <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                        <li><a href="../education.html" class="nav-link">Education</a></li>
+                        <li><a href="../music.html" class="nav-link">Music</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Header -->
+            <header class="page-header">
+                <div style="margin-bottom: 0.75rem;">
+                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                    <span class="category-badge badge-electrical">Electrical Hardware</span>
+                </div>
+                <h1 class="page-title">i.MX8MM Processor Expansion PCB</h1>
+                <p class="page-subtitle">
+                    Custom expansion board designed in KiCAD interfacing SPI and UART high-speed buses directly to an NXP i.MX8M Mini application processor for industrial water telemetry.
+                </p>
+
+                <div class="project-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Promag Enviro Systems</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Hardware &amp; Firmware Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">EDA Software</span>
+                        <span class="meta-value">KiCAD</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Bus Protocols</span>
+                        <span class="meta-value">SPI, UART, I2C, RS-485</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-body">
+                <article class="prose">
+                    <h2>Project Overview</h2>
+                    <p>
+                        At Promag Enviro Systems, the primary industrial controller platform relies on an NXP i.MX8M Mini quad-core ARM processor. To interface the main processor with specialized water-quality sensors and telemetry radios, I designed, simulated, and specified components for a custom daughterboard PCB in KiCAD.
+                    </p>
+
+                    <h2>Circuit Design &amp; Signal Integrity</h2>
+                    <ul>
+                        <li><strong>High-Speed Bus Interfacing:</strong> Routed SPI and UART traces with matched length and controlled impedance lines to prevent signal reflections and cross-talk during high-speed data transmission.</li>
+                        <li><strong>Transient Voltage &amp; ESD Protection:</strong> Implemented TVS diode arrays and galvanic optoisolators on external sensor lines to protect the processor against industrial ground loops and inductive surges.</li>
+                        <li><strong>Component Selection &amp; BOM Management:</strong> Sourced active components, DC-DC step-down buck regulators, and level-shifters to translate between 1.8V processor I/O logic and 3.3V/5.0V peripheral buses.</li>
+                    </ul>
+
+                    <h2>Hardware Bring-Up &amp; Verification</h2>
+                    <p>
+                        Conducted complete benchtop hardware bring-up in the lab:
+                    </p>
+                    <ol>
+                        <li>Power rail verification: validated voltage sequencing and ripple under maximum current load using a digital multimeter and oscilloscope.</li>
+                        <li>Signal analysis: decoded SPI clock and MISO/MOSI packets using a digital logic analyzer to verify timing margins and rise times.</li>
+                        <li>Connected the board to Linux kernel device trees to confirm hardware recognition.</li>
+                    </ol>
+                </article>
+
+                <div class="project-gallery-grid">
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4DF; KiCAD Schematic &amp; Routing</span>
+                        <span style="font-size: 0.75rem;">Multi-layer layout with continuous ground plane</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F4CA; Logic Analyzer Traces</span>
+                        <span style="font-size: 0.75rem;">SPI bus clock integrity &amp; UART handshake timing</span>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span>&#x1F52C; Benchtop Bring-Up</span>
+                        <span style="font-size: 0.75rem;">Oscilloscope probe verification &amp; thermal imaging</span>
+                    </div>
+                </div>
+
+                <div class="project-nav-footer">
+                    <a href="telemetry-enclosure.html" class="btn btn-secondary">&larr; Previous: Telemetry Enclosure</a>
+                    <a href="linux-kernel-dev.html" class="btn btn-primary">Next Project: Linux Kernel Dev &rarr;</a>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="../index.html#home" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                </div>
+                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
+            </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
+
