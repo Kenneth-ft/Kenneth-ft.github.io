@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <title>About Me | Kenneth Tubungbanua</title>
+        <title>KT-2026-MSE Datasheet | Kenneth Tubungbanua</title>
     </head>
     <body>
         <!-- Faint SFU AQ Raccoon Watermark Background -->
@@ -31,106 +31,1077 @@
             </div>
         </header>
 
-        <div class="container">
-            <!-- Page Header -->
-            <header class="page-header">
-                <h1 class="page-title">About Me</h1>
-                <p class="page-subtitle">
-                    The intersection of mechanical intuition, hands-on diagnostics, and deterministic embedded software.
-                </p>
-            </header>
+        <div class="container" style="padding-top: 2rem;">
+            <!-- Datasheet Document Container -->
+            <article class="datasheet-wrapper">
+                
+                <!-- Datasheet Header Banner -->
+                <header class="datasheet-top-banner">
+                    <div class="datasheet-mfr-block">
+                        <div class="datasheet-mfr-logo">SFU MECHATRONIC SYSTEMS LABS &bull; KENNETH SEMICONDUCTOR</div>
+                        <div class="datasheet-doc-id">DOC-ID: DS-KT2026-MSE-REV2 &bull; OCTOBER 2026 &bull; PRELIMINARY SPECIFICATION</div>
+                    </div>
+                    <div class="datasheet-badges">
+                        <span class="datasheet-badge">RoHS Compliant</span>
+                        <span class="datasheet-badge blue">AEC-Q100 Grade 1 (Shop Abuse)</span>
+                        <span class="datasheet-badge green">MSL-1 (Pacific NW Rain)</span>
+                        <span class="datasheet-badge">28-TSSOP Package</span>
+                    </div>
+                </header>
 
-            <main class="page-body">
-                <div class="about-layout">
-                    <!-- Left: Narrative Prose -->
-                    <article class="prose">
-                        <h2>Engineering from the Ground Up</h2>
+                <!-- Part Number & General Title -->
+                <div class="datasheet-header-title">
+                    <div class="datasheet-part-num">
+                        KT-2026-MSE
+                        <span class="datasheet-part-suffix">REV 2.6</span>
+                    </div>
+                    <p class="datasheet-subheading">
+                        High-Performance Mechatronic Co-Processor with Native Bare-Metal C/C++ Engine, Hardware-Accelerated Mechanical Diagnostics, and Full-Stack Cyber-Physical Bus Architecture.
+                    </p>
+                </div>
+
+                <!-- Section 1.0: Device Overview -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">1.0</span>
+                        Device Overview &amp; Key Features
+                    </h2>
+
+                    <div class="about-layout" style="margin-bottom: 2rem;">
+                        <!-- Narrative Prose in Datasheet Style -->
+                        <div class="prose">
+                            <h3 style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); text-transform: uppercase;">
+                                1.1 General Description
+                            </h3>
+                            <p>
+                                The <strong>KT-2026-MSE</strong> is an ultra-reliable, monolithic cyber-physical co-processor designed at the boundary of mechanical intuition and deterministic embedded software. Fabricated on a 4-year continuous mechanical diagnostic process at Mountain Equipment Co-op (MEC) and synthesized through rigorous academic training in Mechatronic Systems Engineering at Simon Fraser University (SFU), this device provides deterministic hardware-software integration without the high impedance typical of pure-software abstractions.
+                            </p>
+                            <p>
+                                Standard microcontrollers often fail in real-world deployment because software engineers treat actuators and sensors as idealized mathematical abstractions, while mechanical teams overlook firmware constraints. The KT-2026-MSE eliminates this boundary by integrating physical diagnostics (bearing preload, hydraulic bleeding, DFM/DFA tolerance stack-ups) directly with bare-metal C register drivers, high-speed multi-layer PCB routing, and real-time control loops.
+                            </p>
+                            <p>
+                                Currently deployed as the <strong>Lead Systems Integrator</strong> for the SFU Bionics 7-DOF prosthetic hand, the device coordinates five concurrent subsystem pipelines (mechanical, electrical, biomedical, firmware, and UI). Additionally, an on-chip high-drive educational transceiver drives weekly electronics and soldering instruction at MakerLabs Vancouver.
+                            </p>
+                        </div>
+
+                        <!-- Silicon Die Micrograph / Package Outline -->
+                        <aside class="datasheet-die-card">
+                            <div class="die-target-reticle">
+                                <img src="images/Baby Photo.jpg" onerror="this.onerror=null; this.src='images/Baby Photo.jpg';" alt="Silicon Die Micrograph - Kenneth Tubungbanua" class="die-photo">
+                                <div class="die-overlay-tag">DIE #KT-2026 [X-RAY/OPTICAL]</div>
+                            </div>
+                            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary); font-weight: 700; margin-bottom: 0.5rem;">
+                                PACKAGE OUTLINE: HUMAN-5'7"-BIPED
+                            </div>
+                            <div class="about-stat-row">
+                                <span class="about-stat-label">Process Node</span>
+                                <span class="about-stat-value">SFU Mechatronics '26</span>
+                            </div>
+                            <div class="about-stat-row">
+                                <span class="about-stat-label">Substrate</span>
+                                <span class="about-stat-value">4 Yrs MEC Bike Shop</span>
+                            </div>
+                            <div class="about-stat-row">
+                                <span class="about-stat-label">Primary Core</span>
+                                <span class="about-stat-value">Bare-Metal C / STM32</span>
+                            </div>
+                            <div class="about-stat-row">
+                                <span class="about-stat-label">Thermal Sinking</span>
+                                <span class="about-stat-value">Pacific NW Trails &amp; Guitar</span>
+                            </div>
+                            <div class="about-stat-row">
+                                <span class="about-stat-label">Foundry Base</span>
+                                <span class="about-stat-value">Greater Vancouver, BC</span>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <h3 style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); text-transform: uppercase; margin-bottom: 1rem;">
+                        1.2 Architectural Acceleration Blocks
+                    </h3>
+                    <div class="datasheet-features-grid">
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Bare-Metal Firmware Core</div>
+                            <p class="datasheet-feature-text">
+                                Direct register manipulation on ARM Cortex-M (STM32), hardware timer interrupts, circular DMA buffers, modular HAL architecture, and deterministic state machines. Zero blocking delay calls.
+                            </p>
+                        </div>
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Mechanical Diagnostics Coprocessor</div>
+                            <p class="datasheet-feature-text">
+                                4 years of high-stress bicycle shop root-cause isolation. Trained on bearing presses, lathe machining, manual mills, hydraulic brake systems, and physical failure triage under customer observation.
+                            </p>
+                        </div>
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Multi-Protocol Hardware Matrix</div>
+                            <p class="datasheet-feature-text">
+                                Native hardware transceivers for high-speed SPI (40 MHz), I2C sensor arrays, USART/UART, differential CAN 2.0B, USB-CDC telemetry, and multi-channel high-frequency PWM motor controllers.
+                            </p>
+                        </div>
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Multi-Layer PCB Layout &amp; DFM</div>
+                            <p class="datasheet-feature-text">
+                                End-to-end electronic hardware design in Altium Designer and KiCad. Schematic capture, 4-layer stackups, controlled impedance routing, SMD assembly (0402, QFN), and digital oscilloscope verification.
+                            </p>
+                        </div>
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Biomedical Kinematics Subsystem</div>
+                            <p class="datasheet-feature-text">
+                                Real-time bio-potential (sEMG) acquisition, analog front-end filtering, and 7-DOF tendon-driven prosthetic hand kinematics modeling using DH parameters and closed-loop current feedback.
+                            </p>
+                        </div>
+                        <div class="datasheet-feature-item">
+                            <div class="datasheet-feature-heading">Pedagogy &amp; Acoustic Output</div>
+                            <p class="datasheet-feature-text">
+                                High-bandwidth educational transceiver as Electronics Instructor at MakerLabs Vancouver. Integrated acoustic synthesis core spanning classical piano performance and live multi-track audio engineering.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2.0: Pinout Configuration & Terminal Functions -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">2.0</span>
+                        Pinout Configuration &amp; Terminal Functions
+                    </h2>
+
+                    <div class="datasheet-pinout-grid">
+                        <!-- Vector SVG IC Package Diagram (TSSOP-28) -->
+                        <div class="datasheet-ic-svg-card">
+                            <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); margin-bottom: 1rem; font-weight: 600;">
+                                FIGURE 1: 28-PIN TSSOP PACKAGE PINOUT (TOP VIEW)
+                            </div>
+                            <svg class="datasheet-ic-svg" viewBox="0 0 560 560" width="540" height="540" xmlns="http://www.w3.org/2000/svg">
+                                <!-- TSSOP IC Body Outline -->
+                                <rect x="175" y="25" width="210" height="510" rx="8" fill="#181014" stroke="#e82f2f" stroke-width="2.5" />
+                                
+                                <!-- Pin 1 Orientation Notch at Top -->
+                                <path d="M 265 25 A 15 15 0 0 0 295 25" fill="#120c0e" stroke="#e82f2f" stroke-width="2" />
+                                
+                                <!-- Pin 1 Orientation Dot -->
+                                <circle cx="198" cy="50" r="5" fill="#e82f2f" />
+
+                                <!-- Center Silicon Markings -->
+                                <text x="280" y="235" font-family="ui-monospace, monospace" font-size="16" font-weight="800" fill="#fdf2f4" text-anchor="middle">KT-2026-MSE</text>
+                                <text x="280" y="258" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#e82f2f" text-anchor="middle">TSSOP-28 • REV 2.6</text>
+                                <text x="280" y="280" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="middle">SFU MECHATRONICS</text>
+                                <text x="280" y="298" font-family="ui-monospace, monospace" font-size="8.5" fill="#7d6b70" text-anchor="middle">PITCH: 0.65 mm • LOT 2126</text>
+                                <text x="280" y="318" font-family="ui-monospace, monospace" font-size="8" fill="#34d399" text-anchor="middle">MEC WRENCH SUBSTRATE</text>
+
+                                <!-- Left Leads (Pins 1 to 14) -->
+                                <!-- Pin 1 -->
+                                <rect x="140" y="44" width="35" height="12" rx="2" fill="#e82f2f" />
+                                <text x="185" y="53.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">1</text>
+                                <text x="130" y="53" font-family="ui-monospace, monospace" font-size="8.5" fill="#fdf2f4" text-anchor="end">VDD_COFFEE</text>
+
+                                <!-- Pin 2 -->
+                                <rect x="140" y="79" width="35" height="12" rx="2" fill="#ff6b6b" />
+                                <text x="185" y="88.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">2</text>
+                                <text x="130" y="88" font-family="ui-monospace, monospace" font-size="8.5" fill="#ff6b6b" text-anchor="end">VDDA_ESPRESSO</text>
+
+                                <!-- Pin 3 -->
+                                <rect x="140" y="114" width="35" height="12" rx="2" fill="#fb923c" />
+                                <text x="185" y="123.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">3</text>
+                                <text x="130" y="123" font-family="ui-monospace, monospace" font-size="8.5" fill="#fb923c" text-anchor="end">NRST_SLEEP</text>
+
+                                <!-- Pin 4 -->
+                                <rect x="140" y="149" width="35" height="12" rx="2" fill="#58a6ff" />
+                                <text x="185" y="158.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">4</text>
+                                <text x="130" y="158" font-family="ui-monospace, monospace" font-size="8.5" fill="#79c0ff" text-anchor="end">BOOT0_SFU</text>
+
+                                <!-- Pin 5 -->
+                                <rect x="140" y="184" width="35" height="12" rx="2" fill="#38242a" />
+                                <text x="185" y="193.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">5</text>
+                                <text x="130" y="193" font-family="ui-monospace, monospace" font-size="8.5" fill="#ad979c" text-anchor="end">BOOT1_CAPILANO</text>
+
+                                <!-- Pin 6 -->
+                                <rect x="140" y="219" width="35" height="12" rx="2" fill="#c084fc" />
+                                <text x="185" y="228.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">6</text>
+                                <text x="130" y="228" font-family="ui-monospace, monospace" font-size="8.5" fill="#c084fc" text-anchor="end">OSC_PIANO_IN</text>
+
+                                <!-- Pin 7 -->
+                                <rect x="140" y="254" width="35" height="12" rx="2" fill="#c084fc" />
+                                <text x="185" y="263.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">7</text>
+                                <text x="130" y="263" font-family="ui-monospace, monospace" font-size="8.5" fill="#c084fc" text-anchor="end">OSC_PIANO_OUT</text>
+
+                                <!-- Pin 8 -->
+                                <rect x="140" y="289" width="35" height="12" rx="2" fill="#fb923c" />
+                                <text x="185" y="298.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">8</text>
+                                <text x="130" y="298" font-family="ui-monospace, monospace" font-size="8.5" fill="#fb923c" text-anchor="end">GND_MEC_WRENCH</text>
+
+                                <!-- Pin 9 -->
+                                <rect x="140" y="324" width="35" height="12" rx="2" fill="#38bdf8" />
+                                <text x="185" y="333.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">9</text>
+                                <text x="130" y="333" font-family="ui-monospace, monospace" font-size="8.5" fill="#38bdf8" text-anchor="end">STM32_SWDIO</text>
+
+                                <!-- Pin 10 -->
+                                <rect x="140" y="359" width="35" height="12" rx="2" fill="#38bdf8" />
+                                <text x="185" y="368.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">10</text>
+                                <text x="130" y="368" font-family="ui-monospace, monospace" font-size="8.5" fill="#38bdf8" text-anchor="end">STM32_SWCLK</text>
+
+                                <!-- Pin 11 -->
+                                <rect x="140" y="394" width="35" height="12" rx="2" fill="#38bdf8" />
+                                <text x="185" y="403.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">11</text>
+                                <text x="130" y="403" font-family="ui-monospace, monospace" font-size="8.5" fill="#38bdf8" text-anchor="end">SPI_MOSI_C</text>
+
+                                <!-- Pin 12 -->
+                                <rect x="140" y="429" width="35" height="12" rx="2" fill="#38bdf8" />
+                                <text x="185" y="438.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">12</text>
+                                <text x="130" y="438" font-family="ui-monospace, monospace" font-size="8.5" fill="#38bdf8" text-anchor="end">SPI_MISO_CPP</text>
+
+                                <!-- Pin 13 -->
+                                <rect x="140" y="464" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="185" y="473.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">13</text>
+                                <text x="130" y="473" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="end">I2C_SDA_SENSORS</text>
+
+                                <!-- Pin 14 -->
+                                <rect x="140" y="499" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="185" y="508.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="start">14</text>
+                                <text x="130" y="508" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="end">I2C_SCL_BUS</text>
+
+                                <!-- Right Leads (Pins 28 down to 15) -->
+                                <!-- Pin 28 -->
+                                <rect x="385" y="44" width="35" height="12" rx="2" fill="#e82f2f" />
+                                <text x="375" y="53.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">28</text>
+                                <text x="430" y="53" font-family="ui-monospace, monospace" font-size="8.5" fill="#ff6b6b" text-anchor="start">VREF_RIGOR</text>
+
+                                <!-- Pin 27 -->
+                                <rect x="385" y="79" width="35" height="12" rx="2" fill="#facc15" />
+                                <text x="375" y="88.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">27</text>
+                                <text x="430" y="88" font-family="ui-monospace, monospace" font-size="8.5" fill="#fde047" text-anchor="start">SFU_RACCOON_NMI</text>
+
+                                <!-- Pin 26 -->
+                                <rect x="385" y="114" width="35" height="12" rx="2" fill="#fb923c" />
+                                <text x="375" y="123.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">26</text>
+                                <text x="430" y="123" font-family="ui-monospace, monospace" font-size="8.5" fill="#fb923c" text-anchor="start">CAD_SOLIDWORKS</text>
+
+                                <!-- Pin 25 -->
+                                <rect x="385" y="149" width="35" height="12" rx="2" fill="#38242a" />
+                                <text x="375" y="158.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">25</text>
+                                <text x="430" y="158" font-family="ui-monospace, monospace" font-size="8.5" fill="#ad979c" text-anchor="start">UART_TX_MAKER</text>
+
+                                <!-- Pin 24 -->
+                                <rect x="385" y="184" width="35" height="12" rx="2" fill="#fb923c" />
+                                <text x="375" y="193.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">24</text>
+                                <text x="430" y="193" font-family="ui-monospace, monospace" font-size="8.5" fill="#fb923c" text-anchor="start">MEC_TORQUE_SENSE</text>
+
+                                <!-- Pin 23 -->
+                                <rect x="385" y="219" width="35" height="12" rx="2" fill="#ff6b6b" />
+                                <text x="375" y="228.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">23</text>
+                                <text x="430" y="228" font-family="ui-monospace, monospace" font-size="8.5" fill="#ff6b6b" text-anchor="start">GPIO_HAKKO_350</text>
+
+                                <!-- Pin 22 -->
+                                <rect x="385" y="254" width="35" height="12" rx="2" fill="#fb923c" />
+                                <text x="375" y="263.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">22</text>
+                                <text x="430" y="263" font-family="ui-monospace, monospace" font-size="8.5" fill="#fb923c" text-anchor="start">GPIO_LATHE_MILL</text>
+
+                                <!-- Pin 21 -->
+                                <rect x="385" y="289" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="375" y="298.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">21</text>
+                                <text x="430" y="298" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="start">CAN_TX_BIONICS</text>
+
+                                <!-- Pin 20 -->
+                                <rect x="385" y="324" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="375" y="333.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">20</text>
+                                <text x="430" y="333" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="start">CAN_RX_BIONICS</text>
+
+                                <!-- Pin 19 -->
+                                <rect x="385" y="359" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="375" y="368.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">19</text>
+                                <text x="430" y="368" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="start">PWM_TENDON_THB</text>
+
+                                <!-- Pin 18 -->
+                                <rect x="385" y="394" width="35" height="12" rx="2" fill="#34d399" />
+                                <text x="375" y="403.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">18</text>
+                                <text x="430" y="403" font-family="ui-monospace, monospace" font-size="8.5" fill="#34d399" text-anchor="start">PWM_TENDON_FGR</text>
+
+                                <!-- Pin 17 -->
+                                <rect x="385" y="429" width="35" height="12" rx="2" fill="#ff6b6b" />
+                                <text x="375" y="438.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">17</text>
+                                <text x="430" y="438" font-family="ui-monospace, monospace" font-size="8.5" fill="#ff6b6b" text-anchor="start">ADC_EMG_CH2</text>
+
+                                <!-- Pin 16 -->
+                                <rect x="385" y="464" width="35" height="12" rx="2" fill="#ff6b6b" />
+                                <text x="375" y="473.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">16</text>
+                                <text x="430" y="473" font-family="ui-monospace, monospace" font-size="8.5" fill="#ff6b6b" text-anchor="start">ADC_EMG_CH1</text>
+
+                                <!-- Pin 15 -->
+                                <rect x="385" y="499" width="35" height="12" rx="2" fill="#38242a" />
+                                <text x="375" y="508.5" font-family="ui-monospace, monospace" font-size="9" fill="#ad979c" text-anchor="end">15</text>
+                                <text x="430" y="508" font-family="ui-monospace, monospace" font-size="8.5" fill="#ad979c" text-anchor="start">GND_ANALOG</text>
+                            </svg>
+                        </div>
+
+                        <!-- Brief Terminal Overview -->
+                        <div>
+                            <h3 style="font-family: var(--font-mono); font-size: 1rem; color: var(--text-primary); text-transform: uppercase; margin-bottom: 0.75rem;">
+                                Package Layout &amp; Signal Integrity
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
+                                The KT-2026-MSE is packaged in a space-efficient <strong>28-lead TSSOP (Thin Shrink Small Outline Package)</strong> with a standard 0.65 mm lead pitch. All signal leads feature dual parallel gull-wing formatting for high inspection visibility and hand-soldering compatibility.
+                            </p>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                                <strong>Isolation Architecture:</strong> Pin 8 (<code>GND_MEC_WRENCH</code>) provides the low-impedance physical mechanic ground reference, while Pin 15 (<code>GND_ANALOG</code>) provides a dedicated star-ground return for the 12-bit bio-potential instrumentation front end.
+                            </p>
+                            <div class="datasheet-warning">
+                                <div class="datasheet-warning-title">Design Rule Check (DRC) Notice</div>
+                                Do not leave Pin 28 (<code>VREF_RIGOR</code>) floating. All mechanical torque specifications, firmware memory allocations, and circuit schematics must be bounded by physical ground truth.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comprehensive TSSOP-28 Terminal Functions Table -->
+                    <div class="datasheet-table-wrap">
+                        <table class="datasheet-table">
+                            <thead>
+                                <tr>
+                                    <th>Pin #</th>
+                                    <th>Pin Name</th>
+                                    <th>Type</th>
+                                    <th>Reset State</th>
+                                    <th>Description &amp; Alternate Functions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mono">1</td>
+                                    <td class="sym">VDD_COFFEE</td>
+                                    <td class="mono">PWR</td>
+                                    <td class="mono">—</td>
+                                    <td>Primary core power rail. Nominal 250–500 mL/day caffeine input required to maintain high clock throughput.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">2</td>
+                                    <td class="sym">VDDA_ESPRESSO</td>
+                                    <td class="mono">PWR</td>
+                                    <td class="mono">—</td>
+                                    <td>Low-noise analog supply for late-night firmware bringup and high-stakes capstone deadlines.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">3</td>
+                                    <td class="sym">NRST_SLEEP</td>
+                                    <td class="mono">IN (Active Low)</td>
+                                    <td class="mono">High</td>
+                                    <td>Asynchronous hardware reset. Pulled low during high-latency sleep states; automatically pulled high at dawn.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">4</td>
+                                    <td class="sym">BOOT0_SFU</td>
+                                    <td class="mono">IN</td>
+                                    <td class="mono">1</td>
+                                    <td>Primary boot pin. Selects BASc Mechatronic Systems Engineering logic core.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">5</td>
+                                    <td class="sym">BOOT1_CAPILANO</td>
+                                    <td class="mono">IN</td>
+                                    <td class="mono">0</td>
+                                    <td>Secondary boot pin. Enforces fundamental engineering transition science and physics foundations.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">6</td>
+                                    <td class="sym">OSC_PIANO_IN</td>
+                                    <td class="mono">CLK</td>
+                                    <td class="mono">440 Hz</td>
+                                    <td>Acoustic quartz crystal input. Provides tempo calibration via classical piano repertoire.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">7</td>
+                                    <td class="sym">OSC_PIANO_OUT</td>
+                                    <td class="mono">CLK</td>
+                                    <td class="mono">440 Hz</td>
+                                    <td>Multi-harmonic acoustic audio synthesis output for live church audio mixing.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">8</td>
+                                    <td class="sym">GND_MEC_WRENCH</td>
+                                    <td class="mono">GND</td>
+                                    <td class="mono">0 V</td>
+                                    <td>Primary physical reference ground. Deeply bonded through 4 years of bicycle mechanic shop troubleshooting.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">9</td>
+                                    <td class="sym">STM32_SWDIO</td>
+                                    <td class="mono">I/O</td>
+                                    <td class="mono">AF</td>
+                                    <td>Serial Wire Debug Data In/Out. Enables bare-metal C register inspection, stack overflow detection, and NVIC trace.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">10</td>
+                                    <td class="sym">STM32_SWCLK</td>
+                                    <td class="mono">IN</td>
+                                    <td class="mono">AF</td>
+                                    <td>Deterministic hardware clock synchronization bus for Cortex-M debuggers.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">11</td>
+                                    <td class="sym">SPI_MOSI_C</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">Hi-Z</td>
+                                    <td>High-speed synchronous master out (40 MHz). Pushes low-latency register-level C peripheral drivers.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">12</td>
+                                    <td class="sym">SPI_MISO_CPP</td>
+                                    <td class="mono">IN</td>
+                                    <td class="mono">Hi-Z</td>
+                                    <td>High-speed synchronous master in. Ingests structured C++ telemetry and sensor frames.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">13</td>
+                                    <td class="sym">I2C_SDA_SENSORS</td>
+                                    <td class="mono">I/O (OD)</td>
+                                    <td class="mono">Hi-Z</td>
+                                    <td>Fast-mode 400 kHz sensor bus. Interrogates 6-axis IMUs, magnetic rotary encoders, and digital thermistors.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">14</td>
+                                    <td class="sym">I2C_SCL_BUS</td>
+                                    <td class="mono">OUT (OD)</td>
+                                    <td class="mono">Hi-Z</td>
+                                    <td>Fast-mode synchronous 400 kHz clock for peripheral sensor acquisition.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">15</td>
+                                    <td class="sym">GND_ANALOG</td>
+                                    <td class="mono">GND</td>
+                                    <td class="mono">0 V</td>
+                                    <td>Isolated star-ground connection for sensitive bio-potential and instrumentation amplifier stages.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">16</td>
+                                    <td class="sym">ADC_EMG_CH1</td>
+                                    <td class="mono">AIN</td>
+                                    <td class="mono">Analog</td>
+                                    <td>12-bit differential analog input acquiring surface electromyography (sEMG) bio-potentials from forearm muscles.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">17</td>
+                                    <td class="sym">ADC_EMG_CH2</td>
+                                    <td class="mono">AIN</td>
+                                    <td class="mono">Analog</td>
+                                    <td>Antagonistic forearm muscle differential channel for intent decoding and prosthetic grip classification.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">18</td>
+                                    <td class="sym">PWM_TENDON_FGR</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">Low</td>
+                                    <td>20 kHz high-resolution motor driver timer output for 7-DOF prosthetic finger flexor tendon.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">19</td>
+                                    <td class="sym">PWM_TENDON_THB</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">Low</td>
+                                    <td>20 kHz timer output driving thumb opposition actuator for multi-modal grasp patterns.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">20</td>
+                                    <td class="sym">CAN_RX_BIONICS</td>
+                                    <td class="mono">IN (Diff)</td>
+                                    <td class="mono">Recessive</td>
+                                    <td>Closed-loop tendon tension, motor current, and tactile feedback bus for prosthetic hand.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">21</td>
+                                    <td class="sym">CAN_TX_BIONICS</td>
+                                    <td class="mono">OUT (Diff)</td>
+                                    <td class="mono">Recessive</td>
+                                    <td>1 Mbps differential command bus broadcasting joint trajectory setpoints across bionics subsystems.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">22</td>
+                                    <td class="sym">GPIO_LATHE_MILL</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">Low</td>
+                                    <td>Digital authorization output for manual lathe metal turning, 3-axis milling, and precision bushing fabrication.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">23</td>
+                                    <td class="sym">GPIO_HAKKO_350</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">Low</td>
+                                    <td>Thermal control output for soldering bench. Drives Hakko T12 hot plate and fine-pitch iron to 350°C.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">24</td>
+                                    <td class="sym">MEC_TORQUE_SENSE</td>
+                                    <td class="mono">AIN</td>
+                                    <td class="mono">Analog</td>
+                                    <td>Tactile strain sensing input. Prevents stripped threads on aluminum bottom brackets and carbon-fiber frames.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">25</td>
+                                    <td class="sym">UART_TX_MAKER</td>
+                                    <td class="mono">OUT</td>
+                                    <td class="mono">AF</td>
+                                    <td>MakerLabs Vancouver instruction broadcast channel (115200 baud). Transmits circuit theory and soldering pedagogy.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">26</td>
+                                    <td class="sym">CAD_SOLIDWORKS</td>
+                                    <td class="mono">I/O</td>
+                                    <td class="mono">Active</td>
+                                    <td>High-bandwidth 3D CAD modeling, kinematics simulation, tolerance stack-up analysis, and DFM validation bus.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">27</td>
+                                    <td class="sym">SFU_AQ_RACCOON_INT</td>
+                                    <td class="mono">IN (NMI)</td>
+                                    <td class="mono">Edge</td>
+                                    <td>Non-maskable asynchronous interrupt. Triggered upon sighting campus wildlife in the SFU AQ; clears stress flags.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">28</td>
+                                    <td class="sym">VREF_RIGOR</td>
+                                    <td class="mono">REF</td>
+                                    <td class="mono">3.3 V</td>
+                                    <td>Ultra-stable internal bandgap reference representing honesty, disciplined inquiry, and engineering integrity.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 3.0: Absolute Maximum Ratings -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">3.0</span>
+                        Absolute Maximum Ratings &amp; Operating Conditions
+                    </h2>
+
+                    <div class="datasheet-warning">
+                        <div class="datasheet-warning-title">Absolute Maximum Ratings Notice</div>
+                        Stresses beyond those listed under <em>Absolute Maximum Ratings</em> may cause permanent cognitive brownout, stripped threads, or jittery soldering iron tips. These are stress ratings only; functional operation under these extreme conditions is verified during 48-hour hardware hackathons and capstone crunches, but long-term reliability is optimized under recommended operating conditions.
+                    </div>
+
+                    <div class="datasheet-table-wrap">
+                        <table class="datasheet-table">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Parameter</th>
+                                    <th>Min</th>
+                                    <th>Typ</th>
+                                    <th>Max</th>
+                                    <th>Unit</th>
+                                    <th>Test Conditions / Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sym">V_COFFEE</td>
+                                    <td>Caffeine Operating Supply Rail</td>
+                                    <td class="val">150</td>
+                                    <td class="val">350</td>
+                                    <td class="val">600</td>
+                                    <td class="unit">mg/day</td>
+                                    <td>Below 150 mg triggers low-power brownout; &gt; 600 mg causes hand jitter on 0402 SMD rework.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">t_BURST</td>
+                                    <td>Continuous Problem-Solving Endurance</td>
+                                    <td class="val">6.0</td>
+                                    <td class="val">12.0</td>
+                                    <td class="val">18.0</td>
+                                    <td class="unit">Hours/day</td>
+                                    <td>Sustained Altium layout, oscilloscope probing, or SolidWorks assembly crunch.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">P_STRESS</td>
+                                    <td>Diagnostic Pressure Under Customer Observation</td>
+                                    <td class="val">-10</td>
+                                    <td class="val">25</td>
+                                    <td class="val">95</td>
+                                    <td class="unit">kPa-equiv</td>
+                                    <td>Calibrated on busy Saturday MEC bike shop triage with customer standing at counter.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">&tau;_WRENCH</td>
+                                    <td>Mechanical Torque Withstand</td>
+                                    <td class="val">0.5</td>
+                                    <td class="val">40.0</td>
+                                    <td class="val">120.0</td>
+                                    <td class="unit">N&bull;m</td>
+                                    <td>0.5 N&bull;m for fine M2 PCB standoffs; 120 N&bull;m for stubborn English bottom brackets.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">V_ESD</td>
+                                    <td>Electrostatic Discharge Immunity (HBM)</td>
+                                    <td class="val">&mdash;</td>
+                                    <td class="val">8.0</td>
+                                    <td class="val">15.0</td>
+                                    <td class="unit">kV</td>
+                                    <td>Human Body Model; protected by grounded ESD lab bench and anti-static wrist strap.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">f_PIANO</td>
+                                    <td>Acoustic Synthesis Dynamic Bandwidth</td>
+                                    <td class="val">20</td>
+                                    <td class="val">440</td>
+                                    <td class="val">17,000</td>
+                                    <td class="unit">Hz</td>
+                                    <td>A440 pitch reference.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">t_TRAIL</td>
+                                    <td>Pacific Northwest Trail Negative Feedback Loop</td>
+                                    <td class="val">2.0</td>
+                                    <td class="val">6.0</td>
+                                    <td class="val">16.0</td>
+                                    <td class="unit">Hours/wk</td>
+                                    <td>Essential negative feedback damping ratio (&zeta; = 0.707) maintaining physical perspective.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">N_RACCOON</td>
+                                    <td>SFU Academic Quadrangle Raccoon Encounters</td>
+                                    <td class="val">0</td>
+                                    <td class="val">2</td>
+                                    <td class="val">8</td>
+                                    <td class="unit">Hits/wk</td>
+                                    <td>Asynchronous non-maskable interrupt (NMI); restores baseline morale between midterm exams.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">T_JUNC</td>
+                                    <td>Operating Junction Temperature Range</td>
+                                    <td class="val">-20</td>
+                                    <td class="val">+25</td>
+                                    <td class="val">+85</td>
+                                    <td class="unit">&deg;C</td>
+                                    <td>Guaranteed functional across freezing Pacific Northwest winters and hot reflow soldering benches.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 4.0: Register Memory Map -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">4.0</span>
+                        Register Memory Map &amp; Bitfields
+                    </h2>
+
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.92rem;">
+                        The KT-2026-MSE features an 8-bit memory-mapped control space spanning offsets <code>0x00</code> through <code>0x05</code>. Control bits determine active execution mode, error tracking, and peripheral muxing.
+                    </p>
+
+                    <!-- Register 0x00: WHO_AM_I -->
+                    <div class="reg-card">
+                        <div class="reg-header">
+                            <span class="reg-name">WHO_AM_I (Device Signature Register)</span>
+                            <span class="reg-addr">Offset: 0x00</span>
+                            <span class="reg-meta">Access: RO &bull; Reset: 0x4B54</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0;">
+                            Returns the unique 16-bit hardware identifier signature for Kenneth Tubungbanua. Always reads <code>0x4B54</code>.
+                        </p>
+                    </div>
+
+                    <!-- Register 0x01: CORE_CONFIG -->
+                    <div class="reg-card">
+                        <div class="reg-header">
+                            <span class="reg-name">CORE_CONFIG (Subsystem Enable Register)</span>
+                            <span class="reg-addr">Offset: 0x01</span>
+                            <span class="reg-meta">Access: R/W &bull; Reset: 0x7F</span>
+                        </div>
+                        
+                        <div class="bitfield-grid">
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 7</div>
+                                <div class="bit-name">RSVD</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 6</div>
+                                <div class="bit-name">ACOUSTIC</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 5</div>
+                                <div class="bit-name">CAD_3D</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 4</div>
+                                <div class="bit-name">MAKER_TEACH</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 3</div>
+                                <div class="bit-name">LEAD_BIONIC</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 2</div>
+                                <div class="bit-name">PCB_ALTIUM</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 1</div>
+                                <div class="bit-name">MECH_DIAG</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 0</div>
+                                <div class="bit-name">C_FIRMWARE</div>
+                                <div class="bit-access">R/W</div>
+                            </div>
+                        </div>
+
+                        <ul class="bit-desc-list">
+                            <li><strong>Bit 0 (C_FIRMWARE):</strong> 1 = Bare-metal C register drivers active; NVIC interrupt handling online.</li>
+                            <li><strong>Bit 1 (MECH_DIAG):</strong> 1 = Bicycle mechanics failure isolation active; zero guesswork permitted.</li>
+                            <li><strong>Bit 2 (PCB_ALTIUM):</strong> 1 = 4-layer impedance-matched PCB routing engine running in Altium / KiCad.</li>
+                            <li><strong>Bit 3 (LEAD_BIONIC):</strong> 1 = Lead Systems Integrator coordination active on SFU Bionics 7-DOF hand.</li>
+                            <li><strong>Bit 4 (MAKER_TEACH):</strong> 1 = Electronics &amp; soldering instructional transceiver enabled at MakerLabs.</li>
+                            <li><strong>Bit 5 (CAD_3D):</strong> 1 = Parametric SolidWorks / Inventor CAD modeling &amp; kinematics solver engaged.</li>
+                            <li><strong>Bit 6 (ACOUSTIC):</strong> 1 = Acoustic piano harmonic generation &amp; live church audio mixing online.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Register 0x02: STATUS_REG -->
+                    <div class="reg-card">
+                        <div class="reg-header">
+                            <span class="reg-name">STATUS_REG (Real-Time Subsystem Flags)</span>
+                            <span class="reg-addr">Offset: 0x02</span>
+                            <span class="reg-meta">Access: RO &bull; Reset: 0x8F</span>
+                        </div>
+
+                        <div class="bitfield-grid">
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 7</div>
+                                <div class="bit-name">READY_HIRE</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 6</div>
+                                <div class="bit-name">COFFEE_OK</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 5</div>
+                                <div class="bit-name">RTOS_SYNC</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 4</div>
+                                <div class="bit-name">TENDON_CAL</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 3</div>
+                                <div class="bit-name">BEARING_FIT</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 2</div>
+                                <div class="bit-name">IRON_350C</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 1</div>
+                                <div class="bit-name">SCOPE_TRIG</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 0</div>
+                                <div class="bit-name">ROOT_CAUSE</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                        </div>
+
+                        <ul class="bit-desc-list">
+                            <li><strong>Bit 0 (ROOT_CAUSE):</strong> 1 = Physical diagnostic procedure completed; mechanical root cause identified.</li>
+                            <li><strong>Bit 1 (SCOPE_TRIG):</strong> 1 = Oscilloscope triggered cleanly on SPI/I2C hardware bus; zero signal ringing.</li>
+                            <li><strong>Bit 2 (IRON_350C):</strong> 1 = Hakko soldering iron tip stabilized at 350&deg;C for precision SMD rework.</li>
+                            <li><strong>Bit 3 (BEARING_FIT):</strong> 1 = Mechanical press-fit verified within &plusmn;0.02 mm tolerance limits.</li>
+                            <li><strong>Bit 7 (READY_HIRE):</strong> 1 = Available for hardware, firmware, and mechatronic engineering roles.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Register 0x03: FAULT_STATUS -->
+                    <div class="reg-card">
+                        <div class="reg-header">
+                            <span class="reg-name">FAULT_STATUS (Hardware &amp; Logic Exception Register)</span>
+                            <span class="reg-addr">Offset: 0x03</span>
+                            <span class="reg-meta">Access: RC_W1 (Read / Clear on Write-1) &bull; Reset: 0x00</span>
+                        </div>
+
+                        <div class="bitfield-grid">
+                            <div class="bit-cell bit-span-3">
+                                <div class="bit-num">Bits 7:5</div>
+                                <div class="bit-name">RESERVED</div>
+                                <div class="bit-access">RO</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 4</div>
+                                <div class="bit-name">BRAKE_SPONGE</div>
+                                <div class="bit-access">RC_W1</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 3</div>
+                                <div class="bit-name">FLOAT_PIN</div>
+                                <div class="bit-access">RC_W1</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 2</div>
+                                <div class="bit-name">CROSS_THREAD</div>
+                                <div class="bit-access">RC_W1</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 1</div>
+                                <div class="bit-name">BLACK_BOX</div>
+                                <div class="bit-access">RC_W1</div>
+                            </div>
+                            <div class="bit-cell">
+                                <div class="bit-num">Bit 0</div>
+                                <div class="bit-name">LOW_CAFFEINE</div>
+                                <div class="bit-access">RC_W1</div>
+                            </div>
+                        </div>
+
+                        <ul class="bit-desc-list">
+                            <li><strong>Bit 0 (LOW_CAFFEINE):</strong> Warning: Bean hopper empty; reload espresso to clear brownout alert.</li>
+                            <li><strong>Bit 1 (BLACK_BOX):</strong> Error: Software engineer attempted to treat physical hardware as an idealized mathematical black box.</li>
+                            <li><strong>Bit 2 (CROSS_THREAD):</strong> Warning: Fastener misaligned during assembly; torque loop aborted.</li>
+                            <li><strong>Bit 3 (FLOAT_PIN):</strong> Error: High-impedance CMOS input left floating without pull-up or pull-down resistor.</li>
+                            <li><strong>Bit 4 (BRAKE_SPONGE):</strong> Warning: Air bubble trapped in hydraulic brake caliper; mineral oil purge scheduled.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Register 0x04 & 0x05 -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+                        <div class="reg-card">
+                            <div class="reg-header">
+                                <span class="reg-name">PERIPH_MUX</span>
+                                <span class="reg-addr">Offset: 0x04</span>
+                                <span class="reg-meta">R/W &bull; Reset: 0x24</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                Selects active peripheral priority: <code>0x1</code> = Bare-Metal STM32, <code>0x2</code> = Embedded Linux Device Tree, <code>0x3</code> = SolidWorks Kinematics, <code>0x4</code> = SFU Bionics HAL. High nibble configures acoustic synthesis mode.
+                            </p>
+                        </div>
+                        <div class="reg-card">
+                            <div class="reg-header">
+                                <span class="reg-name">TORQUE_CALIB</span>
+                                <span class="reg-addr">Offset: 0x05</span>
+                                <span class="reg-meta">R/W &bull; Reset: 0x28 (40 N&bull;m)</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                Calibrates maximum physical wrenching torque rating. Reset default value corresponds to <code>40 N&bull;m</code> (standard bottom bracket cup specification).
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5.0: Communication Protocol & Message Framing -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">5.0</span>
+                        Communication Protocol &amp; Frame Architecture
+                    </h2>
+
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        To exchange data or establish an engineering collaboration with the KT-2026-MSE, external controllers must format transmissions according to the <strong>KTP-26 (Kenneth Transmission Protocol v2.6)</strong> packet specification. All frames must be transmitted across the physical transceiver layer (<a href="contact.html" style="color: var(--accent);">contact.html</a>) with valid polynomial verification.
+                    </p>
+
+                    <!-- Visual Packet Frame Layout -->
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 600;">
+                        FIGURE 2: KTP-26 ASYNCHRONOUS MESSAGE FRAME FORMAT
+                    </div>
+                    <div class="packet-frame-visual">
+                        <div class="packet-chunk sof">
+                            <div class="packet-label">SOF</div>
+                            <div class="packet-val">0x7E</div>
+                            <div class="packet-size">1 Byte</div>
+                        </div>
+                        <div class="packet-chunk len">
+                            <div class="packet-label">Length</div>
+                            <div class="packet-val">0xNN</div>
+                            <div class="packet-size">1 Byte</div>
+                        </div>
+                        <div class="packet-chunk cmd">
+                            <div class="packet-label">CMD_TYPE</div>
+                            <div class="packet-val">0x01..05</div>
+                            <div class="packet-size">1 Byte</div>
+                        </div>
+                        <div class="packet-chunk payload">
+                            <div class="packet-label">Payload Data</div>
+                            <div class="packet-val">UTF-8 Project Briefing</div>
+                            <div class="packet-size">N Bytes (1 to 255)</div>
+                        </div>
+                        <div class="packet-chunk crc">
+                            <div class="packet-label">CRC-16</div>
+                            <div class="packet-val">0xYYYY</div>
+                            <div class="packet-size">2 Bytes (CCITT)</div>
+                        </div>
+                        <div class="packet-chunk eof">
+                            <div class="packet-label">EOF</div>
+                            <div class="packet-val">0x7F</div>
+                            <div class="packet-size">1 Byte</div>
+                        </div>
+                    </div>
+
+                    <!-- Command Opcode Table -->
+                    <div class="datasheet-table-wrap">
+                        <table class="datasheet-table">
+                            <thead>
+                                <tr>
+                                    <th>CMD Opcode</th>
+                                    <th>Command Identifier</th>
+                                    <th>Payload Format</th>
+                                    <th>Expected Device Response</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sym">0x01</td>
+                                    <td class="mono">CMD_FIRMWARE_REQ</td>
+                                    <td>UTF-8 specs: STM32 microcontroller, peripheral buses, RTOS requirements.</td>
+                                    <td>Returns bare-metal HAL architecture, register map proposal, and timing budget.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">0x02</td>
+                                    <td class="mono">CMD_PCB_SPIN</td>
+                                    <td>Electrical schematics, component BOM, impedance constraints in Altium/KiCad.</td>
+                                    <td>Generates DRC-clean 4-layer stackup, Gerber files, and SMD assembly verification.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">0x03</td>
+                                    <td class="mono">CMD_MECH_DIAGNOSTICS</td>
+                                    <td>Assembly symptoms: bearing play, hydraulic sponge, tolerance stack-up error.</td>
+                                    <td>Isolates physical root cause and prescribes precision mechanical solution.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">0x04</td>
+                                    <td class="mono">CMD_COFFEE_CHAT</td>
+                                    <td>Proposed latitude/longitude coordinates and discussion topic (firmware, bikes, music).</td>
+                                    <td>Acks immediately; pulls Pin 1 (<code>VDD_COFFEE</code>) to high voltage rail.</td>
+                                </tr>
+                                <tr>
+                                    <td class="sym">0x05</td>
+                                    <td class="mono">CMD_INTERVIEW_OFFER</td>
+                                    <td>Engineering role description: full-time, co-op, or hardware contract opportunity.</td>
+                                    <td>High-priority interrupt dispatched to Kenneth's primary message queue.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Protocol Transmission Dispatcher Callout -->
+                    <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.75rem; margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                        <div>
+                            <h3 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.35rem;">
+                                Ready to Transmit a Message Frame?
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                Direct transmissions to the physical transceiver. Responses dispatched asynchronously.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="contact.html" class="btn btn-primary">Transmit Packet &rarr; [PHY Interface]</a>
+                            <a href="projects.html" class="btn btn-secondary">Review Silicon Benchmarks</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6.0: Application Information & Theory of Operation -->
+                <section class="datasheet-section">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">6.0</span>
+                        Application Information &amp; Theory of Operation
+                    </h2>
+
+                    <div class="prose" style="max-width: 100%;">
+                        <h3 style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); text-transform: uppercase;">
+                            6.1 The Mechanical Substrate: Shop Floor Diagnostics
+                        </h3>
                         <p>
-                            I am a Mechatronic Systems Engineering student at Simon Fraser University (SFU) with an uncommon path into embedded systems. Before writing bare-metal C register drivers or routing high-speed SPI buses on PCBs, I spent four years working as a bicycle mechanic and clinic instructor at Mountain Equipment Co-op (MEC).
+                            Before writing bare-metal C register drivers or routing high-speed SPI buses on multi-layer PCBs, the KT-2026-MSE operated for four years as a bicycle mechanic and clinic instructor at Mountain Equipment Co-op (MEC). In a fast-paced shop environment, vague theories are unacceptable. When a machine exhibits hydraulic brake sponge, bearing play, or drivetrain hesitation, the engineer must isolate variables, listen, feel, and diagnose the physical root cause with the customer standing directly in front of the stand.
                         </p>
                         <p>
-                            In a busy bike shop, there is no room for vague theories. When a customer brings in a bike with mysterious shifting hesitation, hydraulic brake sponge, or bearing play, you must listen, feel, isolate variables, and diagnose the physical root cause while the customer is standing in front of you. That environment forged my disciplined problem-solving procedure: inspect thoroughly, understand the physical constraints first, and build reliable solutions that endure real-world vibration, contamination, and stress.
+                            That environment forged an unshakeable diagnostic discipline: <em>inspect thoroughly, respect physical constraints, and design systems that survive real-world vibration, contamination, and fatigue</em>.
                         </p>
 
                         <blockquote>
                             "In mechanical diagnostics and embedded firmware alike, reliability begins with understanding the physical reality of the machine."
                         </blockquote>
 
-                        <h2>Bridging the Physical and Digital</h2>
+                        <h3 style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); text-transform: uppercase; margin-top: 2rem;">
+                            6.2 Crossing the Cyber-Physical Boundary
+                        </h3>
                         <p>
-                            When I transitioned from Capilano University to SFU Mechatronics, I realized that modern engineering is frequently fractured: software engineers often treat hardware as an idealized black box, while mechanical engineers can treat electronics as an afterthought. 
-                        </p>
-                        <p>
-                            My passion lies directly at that boundary:
+                            During the transition from Capilano University to Simon Fraser University Mechatronics, it became evident that modern engineering is too often fragmented. Software engineers frequently treat hardware as an idealized black box, while mechanical teams treat electronics as an afterthought. The KT-2026-MSE is specifically calibrated to bridge this boundary:
                         </p>
                         <ul>
-                            <li><strong>Mechanical Design &amp; Fabrication:</strong> Translating functional requirements into CAD models (SolidWorks, Fusion 360, Inventor), performing mechanical advantage calculations, and using lathes, bearing presses, and 3D printing to build physical assemblies.</li>
-                            <li><strong>Electronics &amp; PCB Layout:</strong> Designing schematics and routing custom multi-layer boards in KiCAD and Altium Designer, hand-assembling surface-mount components, and verifying signal integrity with oscilloscopes and logic analyzers.</li>
-                            <li><strong>Bare-Metal Firmware:</strong> Developing deterministically timed C and C++ firmware on ARM Cortex-M microcontrollers (STM32), writing modular Hardware Abstraction Layers (HALs), and authoring custom device tree nodes in the Linux kernel.</li>
+                            <li><strong>Mechanical Design &amp; Fabrication:</strong> Translating functional requirements into CAD models (SolidWorks, Inventor, Fusion 360), performing mechanical advantage calculations, and using manual lathes, mills, bearing presses, and 3D printing to create physical assemblies.</li>
+                            <li><strong>Electronics &amp; PCB Layout:</strong> Capturing schematics and routing custom multi-layer boards in Altium Designer and KiCad, assembling surface-mount components by hand, and verifying signal integrity with oscilloscopes and logic analyzers.</li>
+                            <li><strong>Bare-Metal Firmware:</strong> Writing deterministic C and C++ on ARM Cortex-M microcontrollers (STM32), authoring modular Hardware Abstraction Layers (HALs), and crafting custom device tree nodes in the Linux kernel.</li>
                         </ul>
 
-                        <h2>Technical Leadership &amp; Mentorship</h2>
+                        <h3 style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); text-transform: uppercase; margin-top: 2rem;">
+                            6.3 Systems Leadership &amp; Pedagogy
+                        </h3>
                         <p>
-                            Currently, as the <strong>Lead Systems Integrator</strong> for the Engineers Without Borders SFU Bionics Team, I coordinate across five specialized disciplines (mechanical, electrical, biomedical, firmware, and UI) to build an underactuated, tendon-driven 7DOF bionic prosthetic hand. 
+                            As <strong>Lead Systems Integrator</strong> for the EWB SFU Bionics Team, the device synchronizes five disciplines (mechanical, electrical, biomedical, firmware, UI) to build an underactuated, tendon-driven 7-DOF bionic prosthetic hand.
                         </p>
                         <p>
-                            I also serve as an <strong>Electronics and Soldering Instructor</strong> at MakerLabs in Vancouver, where I teach adults and youth the foundations of Ohm's Law, circuit troubleshooting, breadboard prototyping, and proper THT and SMD soldering techniques. Teaching forces clarity; if you cannot explain circuit analysis simply, you don't understand it deeply enough.
+                            As an <strong>Electronics and Soldering Instructor</strong> at MakerLabs Vancouver, the device translates complex circuit principles (Ohm's Law, RC filters, breadboard prototyping, THT and SMD soldering) into clear, accessible hands-on instruction for adult and youth makers. Teaching demands absolute clarity: if you cannot explain circuit analysis simply, you don't understand it deeply enough.
                         </p>
+                    </div>
+                </section>
 
-                        <h2>Life Outside the Lab</h2>
-                        <p>
-                            When I'm not in front of an oscilloscope or a CAD terminal, I maintain clarity and focus through music and the outdoors. Whether playing piano, dialling in live church sound mixes, cycling Pacific Northwest trails, or crossing paths with the infamous SFU Academic Quadrangle raccoons between lectures, I believe hands-on creativity and real-world observation make for better engineering intuition.
-                        </p>
+                <!-- Section 7.0: Ordering Information & Silicon Revision History -->
+                <section class="datasheet-section" style="margin-bottom: 0;">
+                    <h2 class="datasheet-sec-title">
+                        <span class="datasheet-sec-num">7.0</span>
+                        Ordering Information &amp; Stepping History
+                    </h2>
 
-                        <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="projects/bionic-hand.html" class="btn btn-primary">Explore Flagship Project &rarr;</a>
-                            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-                        </div>
-                    </article>
+                    <div class="datasheet-table-wrap">
+                        <table class="datasheet-table">
+                            <thead>
+                                <tr>
+                                    <th>Orderable Part Number</th>
+                                    <th>Silicon Stepping</th>
+                                    <th>Status</th>
+                                    <th>Availability / Role Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mono" style="color: var(--accent); font-weight: 700;">KT-2026-MSE</td>
+                                    <td class="mono">Rev 2.6 (Current)</td>
+                                    <td><span class="datasheet-badge green">Active / Qualified</span></td>
+                                    <td>Mechatronics, Embedded Firmware (C/C++), Hardware Bringup, Altium PCB Layout.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">KT-2024-LEAD</td>
+                                    <td class="mono">Rev 2.4</td>
+                                    <td><span class="datasheet-badge blue">Operational</span></td>
+                                    <td>SFU Bionics Lead Systems Integrator, MakerLabs Vancouver Electronics Instructor.</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">KT-2020-MEC</td>
+                                    <td class="mono">Rev 1.0</td>
+                                    <td><span class="datasheet-badge">Foundational</span></td>
+                                    <td>Mountain Equipment Co-op (MEC) 4-Year Bicycle Mechanic &amp; Clinic Instructor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                    <!-- Right: Profile Sidebar & At a Glance -->
-                    <aside class="about-sidebar">
-                        <div class="about-card">
-                            <img src="images/Baby Photo.jpg" alt="Kenneth Tubungbanua" class="about-avatar">
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.25rem;">Kenneth Tubungbanua</h3>
-                            <p style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 1.25rem;">BASc Mechatronics &bull; SFU '26</p>
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <a href="contact.html" class="btn btn-primary" style="margin-right: 0.75rem;">Initialize Contact Frame &rarr;</a>
+                        <a href="experience.html" class="btn btn-secondary">Trace Career Git Graph</a>
+                    </div>
+                </section>
 
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Discipline</span>
-                                <span class="about-stat-value">Mechatronic Systems</span>
-                            </div>
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Focus</span>
-                                <span class="about-stat-value">Embedded C/C++, PCBs, DFM</span>
-                            </div>
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Leadership</span>
-                                <span class="about-stat-value">Lead Integrator @ SFU Bionics</span>
-                            </div>
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Teaching</span>
-                                <span class="about-stat-value">Instructor @ MakerLabs</span>
-                            </div>
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Background</span>
-                                <span class="about-stat-value">4 Yrs MEC Bike Mechanic</span>
-                            </div>
-                            <div class="about-stat-row">
-                                <span class="about-stat-label">Location</span>
-                                <span class="about-stat-value">Greater Vancouver, BC</span>
-                            </div>
-                        </div>
-
-                        <!-- Technical Philosophy Card -->
-                        <div class="about-card" style="border-left: 3px solid var(--cat-mech);">
-                            <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.5rem; text-transform: uppercase; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.05em;">Hands-On Foundations</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.55; margin: 0;">
-                                Trained on lathes, mills, bearing presses, SMD reflow hot plates, and digital scopes. Firmware informed by mechanical friction; mechanics designed for embedded control.
-                            </p>
-                        </div>
-                    </aside>
-                </div>
-            </main>
+            </article>
 
             <!-- Footer -->
             <footer>
@@ -150,4 +1121,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-

@@ -1617,4 +1617,481 @@ footer {
     }
 }
 
+/* ==========================================================================
+   Datasheet View & Component Styles (about.html)
+   ========================================================================== */
+
+.datasheet-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.datasheet-top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.datasheet-mfr-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.datasheet-mfr-logo {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.datasheet-doc-id {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.datasheet-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.datasheet-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background-color: rgba(232, 47, 47, 0.1);
+    color: var(--accent-hover);
+    border: 1px solid rgba(232, 47, 47, 0.3);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.datasheet-badge.blue {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: #79c0ff;
+    border-color: rgba(88, 166, 255, 0.3);
+}
+
+.datasheet-badge.green {
+    background-color: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.datasheet-header-title {
+    margin-bottom: 2rem;
+}
+
+.datasheet-part-num {
+    font-family: var(--font-mono);
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.datasheet-part-suffix {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(232, 47, 47, 0.12);
+    border: 1px solid rgba(232, 47, 47, 0.35);
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+}
+
+.datasheet-subheading {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 960px;
+    line-height: 1.55;
+}
+
+.datasheet-sec-title {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-color);
+    margin: 3rem 0 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+
+.datasheet-sec-num {
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+.datasheet-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.datasheet-feature-item {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem;
+    border-left: 3px solid var(--accent);
+}
+
+.datasheet-feature-heading {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.datasheet-feature-text {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Technical Tables */
+.datasheet-table-wrap {
+    overflow-x: auto;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin: 1.25rem 0 2rem;
+}
+
+.datasheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+    min-width: 680px;
+}
+
+.datasheet-table th {
+    background-color: #0e090b;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.datasheet-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(56, 36, 42, 0.6);
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+
+.datasheet-table tr:hover td {
+    background-color: var(--bg-surface-hover);
+    color: var(--text-primary);
+}
+
+.datasheet-table tr:last-child td {
+    border-bottom: none;
+}
+
+.datasheet-table .mono {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-primary);
+}
+
+.datasheet-table .sym {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.datasheet-table .val {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.datasheet-table .unit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Warning & Note Banners */
+.datasheet-warning {
+    background-color: rgba(232, 47, 47, 0.08);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.datasheet-warning-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+}
+
+/* Pinout Vector & Diagram Layout */
+.datasheet-pinout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin: 1.5rem 0 2rem;
+}
+
+.datasheet-ic-svg-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.datasheet-ic-svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Register Bitfield Visualizer */
+.reg-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.reg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reg-name {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.reg-addr {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent);
+    background-color: rgba(232, 47, 47, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(232, 47, 47, 0.25);
+}
+
+.reg-meta {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.bitfield-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+    font-family: var(--font-mono);
+    text-align: center;
+}
+
+.bit-cell {
+    background-color: var(--bg-surface);
+    padding: 0.4rem 0.2rem;
+}
+
+.bit-span-2 { grid-column: span 2; }
+.bit-span-3 { grid-column: span 3; }
+.bit-span-4 { grid-column: span 4; }
+
+.bit-num {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.bit-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    word-break: break-all;
+}
+
+.bit-access {
+    font-size: 0.65rem;
+    color: var(--accent);
+    margin-top: 0.2rem;
+}
+
+.bit-desc-list {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+}
+
+.bit-desc-list li strong {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+/* Packet Frame Architecture */
+.packet-frame-visual {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    font-family: var(--font-mono);
+}
+
+.packet-chunk {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    flex: 1;
+    min-width: 110px;
+    text-align: center;
+    border-top: 3px solid var(--accent);
+}
+
+.packet-chunk.sof { border-top-color: #34d399; }
+.packet-chunk.len { border-top-color: #38bdf8; }
+.packet-chunk.cmd { border-top-color: #facc15; }
+.packet-chunk.payload { border-top-color: var(--accent); flex: 2; min-width: 200px; }
+.packet-chunk.crc { border-top-color: #c084fc; }
+.packet-chunk.eof { border-top-color: #f87171; }
+
+.packet-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.packet-val {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.packet-size {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* Die Micrograph / Mechanical Package Box */
+.datasheet-die-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.die-target-reticle {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--accent);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0 20px rgba(232, 47, 47, 0.15);
+}
+
+.die-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.die-overlay-tag {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #ff6b6b;
+    background-color: rgba(18, 12, 14, 0.85);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(232, 47, 47, 0.4);
+}
+
+@media (max-width: 960px) {
+    .datasheet-pinout-grid {
+        grid-template-columns: 1fr;
+    }
+    .datasheet-wrapper {
+        padding: 1.5rem;
+    }
+    .bitfield-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 
