@@ -41,7 +41,7 @@
                 </div>
                 <h1 class="page-title">STM32 Real-Time Line Follower Robot</h1>
                 <p class="page-subtitle">
-                    Autonomous high-speed differential-drive robot engineered with bare-metal C register-level peripheral drivers, DMA multi-channel ADC scanning, and real-time digital PID feedback steering control.
+                    write something here
                 </p>
 
                 <div class="project-meta-bar">
@@ -68,29 +68,29 @@
                 <article class="prose">
                     <h2>Project Overview</h2>
                     <p>
-                        Developed as the capstone project for <em>Real-Time and Embedded Control Systems</em> at Simon Fraser University, this autonomous mobile robot tracks complex high-speed line trajectories with minimal lateral error. Rather than relying on high-level vendor libraries (like Arduino or standard HAL wrappers), all microcontroller peripheral initialization and timing routines were written in <strong>bare-metal C using direct register manipulation</strong>.
+                        write something here
                     </p>
 
                     <h2>Bare-Metal Firmware Architecture</h2>
                     <ul>
-                        <li><strong>Register-Level Peripheral Setup:</strong> Configured clocks (RCC), general-purpose I/O (GPIO), nested vector interrupt controllers (NVIC), hardware timers (TIM), and analog-to-digital converters (ADC) through direct memory-mapped register writes.</li>
-                        <li><strong>DMA Multi-Channel Sampling:</strong> Used Direct Memory Access (DMA) to continuously stream 8-channel optical reflectance sensor values into a circular RAM buffer with zero CPU overhead.</li>
-                        <li><strong>Deterministic 1 kHz Control Loop:</strong> Configured a dedicated hardware timer to fire a high-priority interrupt every 1.0 ms to compute weighted line position and update motor PWM duty cycles.</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
                     </ul>
 
                     <h2>Digital PID Feedback Control Tuning</h2>
                     <p>
-                        The steering control law calculates the robot's error offset \(\epsilon(t)\) from the track center:
+                        write something here
                     </p>
                     <ul>
-                        <li><strong>Proportional Term (\(K_p\)):</strong> Generates restoring torque proportional to lateral displacement.</li>
-                        <li><strong>Derivative Term (\(K_d\)):</strong> Anticipates trajectory inflection and damps overshoot during sharp S-bends using filtered finite differences.</li>
-                        <li><strong>Integral Term (\(K_i\)):</strong> Eliminates steady-state drift on prolonged banked curves, paired with anti-windup clamping to prevent actuator saturation.</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
                     </ul>
 
                     <h2>Hardware &amp; Power Electronics</h2>
                     <p>
-                        Integrated an optical reflectance sensor bar with dual H-bridge DC motor drivers. Implemented hardware decoupling capacitors and flyback diode protection to isolate motor inductive switching noise from the sensitive 3.3V microcontroller logic rail.
+                        write something here
                     </p>
 
                     <h2>Project Gallery</h2>
@@ -113,7 +113,7 @@
 
                 <div class="project-nav-footer">
                     <a href="6dof-robot-arm.html" class="btn btn-secondary">&larr; Previous: 6DOF Robot Arm</a>
-                    <a href="imx8mm-board.html" class="btn btn-primary">Next Project: i.MX8MM Board &rarr;</a>
+                    <a href="water-tcm.html" class="btn btn-primary">Next Project: Water-TCM &rarr;</a>
                 </div>
             </main>
 

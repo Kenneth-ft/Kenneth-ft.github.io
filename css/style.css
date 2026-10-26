@@ -411,6 +411,53 @@ section, header.hero {
     display: none !important;
 }
 
+.card-image-wrap {
+    width: 100%;
+    height: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.15rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.project-card:hover .card-image {
+    transform: scale(1.03);
+}
+
+.case-study-figure {
+    margin: 2rem 0;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.case-study-img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    background-color: var(--bg-primary);
+    display: block;
+}
+
+.case-study-caption {
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
+}
+
 /* Category Badges & Header */
 .card-header {
     display: flex;
@@ -984,7 +1031,7 @@ section, header.hero {
 
 .coursework-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
@@ -994,6 +1041,9 @@ section, header.hero {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
 }
 
 .course-box h4 {

@@ -41,7 +41,7 @@
                 </div>
                 <h1 class="page-title">7DOF Tendon-Driven Bionic Hand</h1>
                 <p class="page-subtitle">
-                    Underactuated, EMG-controlled prosthetic hand for transradial amputees featuring custom power/sensor PCBs and modular C/C++ Hardware Abstraction Layer firmware.
+                    write something here
                 </p>
 
                 <!-- Project Metadata Bar -->
@@ -73,47 +73,38 @@
                 <article class="prose">
                     <h2>Project Overview &amp; Systems Architecture</h2>
                     <p>
-                        The goal of the EWB SFU Bionics Team is to develop an affordable, lightweight, underactuated 7-degree-of-freedom prosthetic hand for transradial amputees. As Lead Systems Integrator, I drafted the core concept and systems engineering architecture, coordinating efforts across 3 mechanical subteams, 1 electrical team, 1 biomedical team, and 1 software team.
-                    </p>
-                    <p>
-                        The hand uses tendon-driven actuation driven by high-torque coreless DC servos. Grip patterns are controlled via non-invasive surface electromyography (sEMG) sensors placed on the user's forearm, which capture muscle contraction envelopes.
+                        write something here
                     </p>
 
                     <h2>Electrical Engineering: Custom PCBs</h2>
                     <p>
-                        To fit inside the spatial constraints of a human forearm socket, commercial breakout boards were insufficient. I designed, routed, and specified components for custom multi-board PCB assemblies in KiCAD:
+                        write something here
                     </p>
                     <ul>
-                        <li><strong>Power Distribution Board:</strong> High-efficiency synchronous buck converters delivering high continuous current (up to 6A peak) to drive multiple micro-servos without browning out the microcontroller.</li>
-                        <li><strong>Sensor Multiplexing Board:</strong> Routes multi-channel EMG inputs, tendon tension load cells, and magnetic joint encoders back to the main processing unit over a noise-shielded I2C/SPI bus.</li>
-                        <li><strong>SMD Assembly &amp; Verification:</strong> Hand-soldered 0603 and QFN packages using hot air and microscope inspection, verifying ripple noise on an oscilloscope.</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
                     </ul>
 
                     <h2>Firmware Architecture: Modular Hardware Abstraction Layer (HAL)</h2>
                     <p>
-                        A major architectural bottleneck on past collegiate robotics teams was tight coupling between hardware driver code and high-level logic. If an actuator or sensor model changed, high-level grip algorithms broke.
-                    </p>
-                    <p>
-                        To eliminate this, I architected a modular <strong>Hardware Abstraction Layer (HAL)</strong> in C/C++:
+                        write something here
                     </p>
                     <ul>
-                        <li><strong>Driver Layer:</strong> Direct register-level access to PWM timers, DMA-driven ADC channels, and hardware I2C/SPI peripherals.</li>
-                        <li><strong>HAL Interface:</strong> Provides clean standardized interfaces (e.g. <code>Finger_SetTension(id, value)</code>, <code>EMG_GetFilteredEnvelope(ch)</code>) completely decoupling hardware from application logic.</li>
-                        <li><strong>Control Layer:</strong> Finite state machine executing grip transitions (pinch, power grasp, tripod, neutral) based on EMG pattern classification.</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
                     </ul>
 
                     <h2>Engineering Challenges &amp; Diagnostics</h2>
                     <p>
-                        Early breadboard prototypes suffered from severe electrical noise: whenever servo motors actuated, the inductive spikes coupled into the microvolt-level surface EMG analog traces, causing false-trigger grip oscillations.
+                        write something here
                     </p>
-                    <p>
-                        Using my diagnostic background, I isolated the noise path using an oscilloscope and resolved it through:
-                    </p>
-                    <ol>
-                        <li>Separating noisy motor power planes from sensitive analog ground planes using a single star-ground point.</li>
-                        <li>Implementing LC low-pass pi-filters on the power rails feeding the instrumentation amplifiers.</li>
-                        <li>Adding a 60 Hz digital notch filter and moving-average filter inside the ADC interrupt service routine (ISR).</li>
-                    </ol>
+                    <ul>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                        <li>write something here</li>
+                    </ul>
 
                     <h2>Project Gallery &amp; Schematics</h2>
                 </article>
@@ -145,8 +136,10 @@
                 <div class="footer-links">
                     <a href="../index.html#home" class="footer-link">Home</a>
                     <a href="../about.html" class="footer-link">About</a>
-                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../projects.html" class="footer-link">Projects</a>
+                    <a href="../experience.html" class="footer-link">Experience</a>
                     <a href="../education.html" class="footer-link">Education</a>
+                    <a href="../music.html" class="footer-link">Music</a>
                     <a href="../contact.html" class="footer-link">Contact</a>
                     <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
                 </div>
@@ -157,155 +150,3 @@
         <script src="../js/main.js"></script>
     </body>
 </html>
-    <body>
-        <!-- Persistent Sticky Header Navigation -->
-        <header class="site-header">
-            <div class="nav-container">
-                <a href="../index.html#home" class="nav-brand">
-                    <span>Kenneth Tubungbanua</span>
-                    <span class="nav-badge">BASc Mechatronics @ SFU</span>
-                </a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
-                        <li><a href="../about.html" class="nav-link">About</a></li>
-                        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
-                        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
-                        <li><a href="../education.html" class="nav-link">Education</a></li>
-                        <li><a href="../music.html" class="nav-link">Music</a></li>
-                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <div class="container">
-            <!-- Project Header -->
-            <header class="page-header">
-                <div style="margin-bottom: 0.75rem;">
-                    <a href="../index.html#projects" style="color: var(--accent); text-decoration: none; font-size: 0.88rem;">&larr; Back to All Projects</a>
-                </div>
-                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
-                    <span class="category-badge badge-electrical">Electrical Hardware</span>
-                    <span class="category-badge badge-software">Software / Firmware</span>
-                    <span class="badge-featured">&#x2605; Featured Project</span>
-                </div>
-                <h1 class="page-title">7DOF Tendon-Driven Bionic Hand</h1>
-                <p class="page-subtitle">
-                    Underactuated, EMG-controlled prosthetic hand for transradial amputees featuring custom power/sensor PCBs and modular C/C++ Hardware Abstraction Layer firmware.
-                </p>
-
-                <!-- Project Metadata Bar -->
-                <div class="project-meta-bar">
-                    <div class="meta-item">
-                        <span class="meta-label">Role</span>
-                        <span class="meta-value">Lead Systems Integrator</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Organization</span>
-                        <span class="meta-value">Engineers Without Borders SFU Bionics</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">Jan 2026 &ndash; Present</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Disciplines</span>
-                        <span class="meta-value">PCB Design, Embedded C/C++, HAL Architecture</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Tools</span>
-                        <span class="meta-value">KiCAD, STM32 / ARM, SolidWorks, SMD Soldering</span>
-                    </div>
-                </div>
-            </header>
-
-            <main class="page-body">
-                <article class="prose">
-                    <h2>Project Overview &amp; Systems Architecture</h2>
-                    <p>
-                        The goal of the EWB SFU Bionics Team is to develop an affordable, lightweight, underactuated 7-degree-of-freedom prosthetic hand for transradial amputees. As Lead Systems Integrator, I drafted the core concept and systems engineering architecture, coordinating efforts across 3 mechanical subteams, 1 electrical team, 1 biomedical team, and 1 software team.
-                    </p>
-                    <p>
-                        The hand uses tendon-driven actuation driven by high-torque coreless DC servos. Grip patterns are controlled via non-invasive surface electromyography (sEMG) sensors placed on the user's forearm, which capture muscle contraction envelopes.
-                    </p>
-
-                    <h2>Electrical Engineering: Custom PCBs</h2>
-                    <p>
-                        To fit inside the spatial constraints of a human forearm socket, commercial breakout boards were insufficient. I designed, routed, and specified components for custom multi-board PCB assemblies in KiCAD:
-                    </p>
-                    <ul>
-                        <li><strong>Power Distribution Board:</strong> High-efficiency synchronous buck converters delivering high continuous current (up to 6A peak) to drive multiple micro-servos without browning out the microcontroller.</li>
-                        <li><strong>Sensor Multiplexing Board:</strong> Routes multi-channel EMG inputs, tendon tension load cells, and magnetic joint encoders back to the main processing unit over a noise-shielded I2C/SPI bus.</li>
-                        <li><strong>SMD Assembly &amp; Verification:</strong> Hand-soldered 0603 and QFN packages using hot air and microscope inspection, verifying ripple noise on an oscilloscope.</li>
-                    </ul>
-
-                    <h2>Firmware Architecture: Modular Hardware Abstraction Layer (HAL)</h2>
-                    <p>
-                        A major architectural bottleneck on past collegiate robotics teams was tight coupling between hardware driver code and high-level logic. If an actuator or sensor model changed, high-level grip algorithms broke.
-                    </p>
-                    <p>
-                        To eliminate this, I architected a modular <strong>Hardware Abstraction Layer (HAL)</strong> in C/C++:
-                    </p>
-                    <ul>
-                        <li><strong>Driver Layer:</strong> Direct register-level access to PWM timers, DMA-driven ADC channels, and hardware I2C/SPI peripherals.</li>
-                        <li><strong>HAL Interface:</strong> Provides clean standardized interfaces (e.g. <code>Finger_SetTension(id, value)</code>, <code>EMG_GetFilteredEnvelope(ch)</code>) completely decoupling hardware from application logic.</li>
-                        <li><strong>Control Layer:</strong> Finite state machine executing grip transitions (pinch, power grasp, tripod, neutral) based on EMG pattern classification.</li>
-                    </ul>
-
-                    <h2>Engineering Challenges &amp; Diagnostics</h2>
-                    <p>
-                        Early breadboard prototypes suffered from severe electrical noise: whenever servo motors actuated, the inductive spikes coupled into the microvolt-level surface EMG analog traces, causing false-trigger grip oscillations.
-                    </p>
-                    <p>
-                        Using my diagnostic background, I isolated the noise path using an oscilloscope and resolved it through:
-                    </p>
-                    <ol>
-                        <li>Separating noisy motor power planes from sensitive analog ground planes using a single star-ground point.</li>
-                        <li>Implementing LC low-pass pi-filters on the power rails feeding the instrumentation amplifiers.</li>
-                        <li>Adding a 60 Hz digital notch filter and moving-average filter inside the ADC interrupt service routine (ISR).</li>
-                    </ol>
-
-                    <h2>Project Gallery &amp; Schematics</h2>
-                </article>
-
-                <div class="project-gallery-grid">
-                    <div class="gallery-placeholder">
-                        <span>&#x1F4F7; KiCAD 3D PCB Layout</span>
-                        <span style="font-size: 0.75rem;">Power distribution &amp; sensor multiplexing daughterboard</span>
-                    </div>
-                    <div class="gallery-placeholder">
-                        <span>&#x2699; SolidWorks Assembly</span>
-                        <span style="font-size: 0.75rem;">7DOF tendon routing &amp; palm chassis design</span>
-                    </div>
-                    <div class="gallery-placeholder">
-                        <span>&#x1F4C8; Oscilloscope Telemetry</span>
-                        <span style="font-size: 0.75rem;">EMG signal acquisition &amp; motor PWM response</span>
-                    </div>
-                </div>
-
-                <!-- Project Navigation Footer -->
-                <div class="project-nav-footer">
-                    <a href="../index.html#projects" class="btn btn-secondary">&larr; All Projects</a>
-                    <a href="6dof-robot-arm.html" class="btn btn-primary">Next Project: 6DOF Robot Arm &rarr;</a>
-                </div>
-            </main>
-
-            <!-- Footer -->
-            <footer>
-                <div class="footer-links">
-                    <a href="../index.html#home" class="footer-link">Home</a>
-                    <a href="../about.html" class="footer-link">About</a>
-                    <a href="../index.html#projects" class="footer-link">Projects</a>
-                    <a href="../education.html" class="footer-link">Education</a>
-                    <a href="../contact.html" class="footer-link">Contact</a>
-                    <a href="https://www.linkedin.com/in/kenneth-tubungbanua-72151022a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                </div>
-                <p>&copy; 2026 Kenneth Tubungbanua &bull; Mechatronic Systems Engineering</p>
-            </footer>
-        </div>
-
-        <script src="../js/main.js"></script>
-    </body>
-</html>
-    </head>
